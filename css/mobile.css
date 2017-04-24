@@ -191,7 +191,10 @@ Créateur : Christophe HERMANN (@chrishrmnn)
 		***************/
 		
 		section[role=main] h3:after {
-			//background:url('../img/pictos-titre.png') no-repeat 11px 10px;
+			background-image:url('../img/perfil.jpg');
+            background-size: cover;
+            background-position: center center;
+            border-radius: 50%;
 		}
 		
 		section[role=main] .competences h3:after {
