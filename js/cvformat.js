@@ -32,7 +32,7 @@ function loadInformation(cv_datas){
             
             if (ca==cv_datas.datas[i].id_category){
                 if (cv_datas.datas[i].field!="photoCV"){
-                    section=section+'<p><b>'+cv_datas.datas[i].text_field+':</b> <span>'+cv_datas.datas[i].info+'</span></p>';
+                    section=section+'<p><b>'+cv_datas.datas[i].text_field+':</b> <span class="cv_data_extra">'+cv_datas.datas[i].info+'</span></p>';
                 }
             }
         }
