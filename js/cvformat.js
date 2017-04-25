@@ -31,8 +31,13 @@ function loadInformation(cv_datas){
         for (var i=0;i< cv_datas.datas.length;i++){
             
             if (ca==cv_datas.datas[i].id_category){
+                
                 if (cv_datas.datas[i].field!="photoCV"){
-                    section=section+'<p><b>'+cv_datas.datas[i].text_field+':</b> <span class="cv_data_extra">'+cv_datas.datas[i].info+'</span></p>';
+                    var info_date="";
+                    if (cv_datas.datas[i].date!=""){
+                        info_date='('+cv_datas.datas[i].date+')';
+                    }
+                    section=section+'<p><b>'+cv_datas.datas[i].text_field+' '+info_date+':</b> <span class="cv_data_extra">'+cv_datas.datas[i].info+'</span></p>';
                 }
             }
         }
