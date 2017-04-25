@@ -13,7 +13,7 @@ function loadLateralMenu(categ){
     
     var list_categ="";
     for (var i=0;i<categ.length;i++){
-        list_categ=list_categ+'<li class="pushy-link"><a href="#">'+categ[i]+'</a></li>';
+        list_categ=list_categ+'<li class="pushy-link"><a href="#"><input type="checkbox" id="cbox'+categ[i]+'" value="'+categ[i]+'"><label class="label_menu" for="cbox'+categ[i]+'">'+categ[i]+'</label></input></a></li>';
     }
     
     
@@ -26,7 +26,7 @@ function loadInformation(cv_datas){
     var name_cate=cv_datas.all_values_uni("category");
     for (var c=0;c< cate.length;c++){
         var ca=cate[c];
-        var section='<div class="grid_16"><div class="grid_16  '+ca+'""><h3>'+name_cate[c]+'</h3>';
+        var section='<div class="grid_16"><div id="div_'+ca+'" class="grid_16  '+ca+'""><h3>'+name_cate[c]+'</h3>';
         
         for (var i=0;i< cv_datas.datas.length;i++){
             
