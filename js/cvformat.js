@@ -13,7 +13,7 @@ function loadLateralMenu(categ){
     
     var list_categ="";
     for (var i=0;i<categ.length;i++){
-        list_categ=list_categ+'<li class="pushy-link"><a href="#"><input type="checkbox" id="cbox'+categ[i]+'" value="'+categ[i]+'"><label class="label_menu" for="cbox'+categ[i]+'">'+categ[i]+'</label></input></a></li>';
+        list_categ=list_categ+'<li class="pushy-link"><a href="#"><input  type="checkbox" id="cbox'+categ[i]+'" value="'+categ[i]+'"><label class="label_menu" for="cbox'+categ[i]+'">'+categ[i]+'</label></input></a></li>';
     }
     
     
