@@ -1,5 +1,11 @@
-window.onload= loadCVFull;
-
+window.onload= init;
+function init(){
+    loadCVFull('es');
+}
+function changeLang(lang){
+    //on the moment load full CV, in the fure only select category
+    loadCVFull(lang);
+}
 function loadHeader(nameTitle){
     
   
@@ -7,7 +13,17 @@ function loadHeader(nameTitle){
     
     
     
-    $("#header").append(header);
+    $("#div_header").html(header);
+}
+function loadLateralMenuLang(langs){
+    
+    var list_langs="";
+    for (var i=0;i<langs.length;i++){
+        list_langs=list_langs+'<li class="pushy-link"><a href="#"><button id="cbox'+langs[i]+'" onclick="changeLang(\''+langs[i]+'\')"><span class="label_menu" >'+langs[i]+'</span></button></a></li>';
+    }
+    
+    $("#submenuLang").html("");
+    $("#submenuLang").append(list_langs);
 }
 function loadLateralMenu(categ){
     
@@ -16,7 +32,7 @@ function loadLateralMenu(categ){
         list_categ=list_categ+'<li class="pushy-link"><a href="#"><input  type="checkbox" id="cbox'+categ[i]+'" value="'+categ[i]+'"><label class="label_menu" for="cbox'+categ[i]+'">'+categ[i]+'</label></input></a></li>';
     }
     
-    
+    $("#submenuCat").html("");
     $("#submenuCat").append(list_categ);
 }
 function loadInformation(cv_datas){
@@ -46,30 +62,20 @@ function loadInformation(cv_datas){
         sections=sections+section;
     }
     sections=sections+'</section>';
-    $("#container").append(sections);
+    $("#container").html(sections);
+    //$("#container").append(sections);
 }
-function createTreeCategories(cv_datas){
-    var section_categories='';
-    var categories=[];
-    //for in datas
-    for (var i=0;i< cv_datas.length;i++){
-            var cate=cv_datas[i].category;
-            if (cate == cv_datas[i].field){
-                categories.push([cv_datas[i].text_field,cv_datas[i].info]);
-                section_categories=section_categories+'<section class="uk-section uk-section-primary  uk-column-divider  "><div class="uk-grid-match uk-child-width-1-2@m" uk-grid><h3 >'+cv_datas[i].text_field+'</h3><h2 >'+cv_datas[i].info+'</h2></div></section>'
-            }
-    }
 
-    $("body").append(section_categories);
-}
-function loadCVFull(){
+function loadCVFull(lang){
     //Load full Curriculum
-    var datas_cv= new datasCV();
+    var datas_cv= new datasCV(lang);
     // make header
     var cate=datas_cv.all_values_uni("category");
     var nameTitle=datas_cv.value("name");
+    var langs=datas_cv.all_langs;
     loadHeader(nameTitle);
+    loadLateralMenuLang(langs);
     loadLateralMenu(cate);
     loadInformation(datas_cv);
-    createTreeCategories(datas_cv.datas);
+    //createTreeCategories(datas_cv.datas);
 } 

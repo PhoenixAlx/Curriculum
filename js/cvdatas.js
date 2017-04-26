@@ -2,8 +2,9 @@ function onlyUnique(value, index, self) {
     return self.indexOf(value) === index;
 }
 class datasCV{
-    constructor(){
-        this.datas = JSON.parse(data);
+    constructor(lang){
+        this.datas = data[lang];
+        this.all_langs = Object.keys(data);
     }
     get name_categories(){
         var cate_list=[];
