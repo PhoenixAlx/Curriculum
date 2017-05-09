@@ -67,6 +67,36 @@ data = {
                 "date":"2011",        
                 "image":"",        
                 "value":"380"    
+            },
+            {   "field":"Creacion_Gestion_Empresas",        
+                "text_field":"Curso de creación y gestión de Empresas",        
+                "info":"Autoempleo. IFES",        
+                "category":"Formación", 
+                "id_category":"formacion",       
+                "subcategory":"formacion_presencial",
+                "date":"2010",        
+                "image":"",        
+                "value":""    
+            },
+            {   "field":"Programacion_java_WSAD",        
+                "text_field":"Curso Programación en java+WSAD",        
+                "info":"",        
+                "category":"Formación", 
+                "id_category":"formacion",       
+                "subcategory":"formacion_presencial",
+                "date":"2009",        
+                "image":"",        
+                "value":""    
+            },
+            {   "field":"Java_Oracle",        
+                "text_field":"Curso de Java y Oracle",        
+                "info":"Atos Origin.",        
+                "category":"Formación", 
+                "id_category":"formacion",       
+                "subcategory":"formacion_presencial",
+                "date":"2007",        
+                "image":"",        
+                "value":"170"    
             }
         ],
         'en':[
