@@ -137,6 +137,26 @@ data = {
                 "date":"2003",        
                 "image":"",        
                 "value":"20"    
+            },
+            {   "field":"Lenguaje_Materno",        
+                "text_field":"Lenguaje materno",        
+                "info":"Español",        
+                "category":"Idiomas", 
+                "id_category":"idiomas",       
+                "subcategory":"idioma_oficial",
+                "date":"",        
+                "image":"",        
+                "value":""    
+            },
+            {   "field":"Lenguaje_Ingles",        
+                "text_field":"Inglés",        
+                "info":"B1",        
+                "category":"Idiomas", 
+                "id_category":"idiomas",       
+                "subcategory":"idioma_oficial",
+                "date":"",        
+                "image":"",        
+                "value":""    
             }
         ],
         'en':[
@@ -277,6 +297,26 @@ data = {
                 "date":"2003",        
                 "image":"",        
                 "value":"20"    
+            },
+            {   "field":"Mother_Tongue",        
+                "text_field":"Mother tongue",        
+                "info":"Spanish",        
+                "category":"Languages", 
+                "id_category":"languages",       
+                "subcategory":"languages_oficial",
+                "date":"",        
+                "image":"",        
+                "value":""    
+            },
+            {   "field":"Language_English",        
+                "text_field":"English",        
+                "info":"B1",        
+                "category":"Languages", 
+                "id_category":"Languages",       
+                "subcategory":"Languages_oficial",
+                "date":"",        
+                "image":"",        
+                "value":""    
             }
         ]
     }; 
