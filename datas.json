@@ -247,6 +247,16 @@ data = {
                 "date":"2011",        
                 "image":"",        
                 "value":""    
+            },
+            {   "field":"Tecnicas_MonteCarlo_Enseñanza_Estadística",        
+                "text_field":"Técnicas Monte Carlo para la enseñanza de la estadística",        
+                "info":"Bueno Pérez, F.M. Alexander y Manzano Diosdado, Daniel. Probabilidad Condicionada Actas de las 1a Jornadas Virtuales en Didáctica de la Estadística, Probabilidad y Combinatoria Número I, Año I vol 2 Junio 2013 Actas de las 1a Jornadas Virtuales en Didáctica de la Estadística, Probabilidad y Combinatoria ISSN: 2255-5854 Depósito Legal: GR 446-2013",        
+                "category":"Publicaciones", 
+                "id_category":"publicaciones",       
+                "subcategory":"congresos",
+                "date":"2013",        
+                "image":"",        
+                "value":""    
             }
         ],
         'en':[
