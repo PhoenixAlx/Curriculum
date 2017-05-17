@@ -158,6 +158,16 @@ data = {
                 "image":"",        
                 "value":""    
             },
+            {   "field":"GAA_2014_2017",        
+                "text_field":"Asistente academico 2014-actualmente",        
+                "info":"Colaboradorador en el departamento de economía de la universidad de Middlesex en Londres en tareas de programación y desarrollo de herramientas para investigaciones además de administrar el servidor y las webs de dicho departamento.",        
+                "category":"Experiencia Laboral", 
+                "id_category":"experiencia_laboral",       
+                "subcategory":"educacion",
+                "date":"2014",        
+                "image":"",        
+                "value":""    
+            },
             {   "field":"Colaborador_APQUA",        
                 "text_field":"Colaborador APQUA 2013",        
                 "info":"Colaborador del proyecto educativo universitario APQUA, de la Universitat Rovira i Virgili, que desarrolla herramientas para fomentar la cultualización científica de las personas",        
