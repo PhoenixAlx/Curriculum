@@ -159,8 +159,8 @@ data = {
                 "value":""    
             },
             {   "field":"GAA_2014_2017",        
-                "text_field":"Asistente Académico 2014-actualmente",        
-                "info":"Colaboradorador en el departamento de economía de la universidad de Middlesex en Londres en tareas de programación y desarrollo de herramientas para investigaciones además de administrar el servidor y las webs de dicho departamento.",        
+                "text_field":"Asistente Académico",        
+                "info":"Trabajando actualmente en el departamento de economía de la universidad de Middlesex en Londres en tareas de programación y desarrollo de herramientas para investigaciones además de administrar el servidor y las webs de dicho departamento.",        
                 "category":"Experiencia Laboral", 
                 "id_category":"experiencia_laboral",       
                 "subcategory":"educacion",
