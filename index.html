@@ -31,11 +31,11 @@
     </head>
     <body  class="push">
         <!-- Menu Button -->
-        
-        <header id="header" class="push" role="banner">
+        <div id="menu">
             <div id="menu_categories"></div>
             <div id="menu_lang"></div>
-            <div id="menu_categories"></div>
+        </div>
+        <header id="header" class="push" role="banner">
             <div id="div_header">
             </div>
         </header>
@@ -45,7 +45,9 @@
             
         </div>
         <script>
-            
+            let datas_cv=new datasCV(data,'es')
+            let c=new CV(datas_cv);
+            console.log(c)
         </script>
     </body>
 </html>

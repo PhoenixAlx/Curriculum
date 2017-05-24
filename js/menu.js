@@ -62,9 +62,12 @@ class menu{
         let nav_menu=document.getElementById('nav_menu_'+this.name_container);
         nav_menu.style.display="none";
         nav_menu.style.width="100%";
+        nav_menu.style.maxHeight="500px";
         nav_menu.style.border="solid "+border_size+" "+color;
         nav_menu.style.borderRadius="5px";
         nav_menu.style.backgroundColor=this.background_color;
+        nav_menu.style.overflow="auto";
+ 
     }
     addUlCSS(ul_id,position){
         let ul_menu=document.getElementById(this.element[ul_id]);
@@ -73,6 +76,7 @@ class menu{
         ul_menu.style.padding="0";
         ul_menu.style.margin="0";
         ul_menu.style.textAlign="center";
+
         
     }   
     addLiCSS(li_id,position){
@@ -108,9 +112,9 @@ class menu{
     insertOptions(dict_options,parent){
         let position=this.getPosition(dict_options);
         let list_options=dict_options.elements;
-        let ul_id='nav_menu_ul';
+        let ul_id='nav_menu_ul_'+this.name_container;
         if (position>0){
-            ul_id=ul_id+parent.split("nav_menu_li_option")[1]+"_"+position;
+            ul_id=ul_id+parent.split("nav_menu_li_option_"+this.name_container)[1]+"_"+position;
         }else{
             ul_id=ul_id+"_"+position;
         }
@@ -130,7 +134,7 @@ class menu{
         let parent="";
         if (dict_options.parent=="undefined" || dict_options.parent==null ){
             //principal options
-            parent="nav_menu_li_option";
+            parent="nav_menu_li_option_"+this.name_container;
             let nav_ul_menu=document.getElementById('nav_menu_'+this.name_container);
             nav_ul_menu.innerHTML=this.insertOptions(dict_options,parent)+'</ul>';
         }else{
