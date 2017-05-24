@@ -11,10 +11,10 @@ class CV{
        this.datas_cv.lang=lang;
     }
     loadMenuLang(){
-        let name_lang={'es':'spanish','en':'english'};
+        let name_lang={'es':{'es':'español','en':'inglés'},'en':{'es':'spanish','en':'english'}};
         let langs=[];
         for (let i in this.datas_cv.all_langs){
-            langs.push(name_lang[datas_cv.all_langs[i]])
+            langs.push(name_lang[this.datas_cv.lang][datas_cv.all_langs[i]])
         }
         let m= new menu("menu_lang");
         m.imgMenu="img/lang.png";
