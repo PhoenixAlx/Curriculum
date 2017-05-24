@@ -169,7 +169,7 @@ data = {
                 "value":""    
             },
             {   "field":"Colaborador_APQUA",        
-                "text_field":"Colaborador APQUA 2013",        
+                "text_field":"Colaborador APQUA ",        
                 "info":"Colaborador del proyecto educativo universitario APQUA, de la Universitat Rovira i Virgili, que desarrolla herramientas para fomentar la cultualización científica de las personas",        
                 "category":"Experiencia Laboral", 
                 "id_category":"experiencia_laboral",       
@@ -179,7 +179,7 @@ data = {
                 "value":""    
             },
             {   "field":"Profesor_Apoyo",        
-                "text_field":"Profesor de apoyo 2012",        
+                "text_field":"Profesor de apoyo ",        
                 "info":"Profesor de apoyo a alumnos de secundaria y universidad reforzando y mejorando los conocimientos de alumnos de secundaria, bachillerato y universidad en las asignaturas de física y matemáticas en la academia Megía Moreno Manuela Julia.",        
                 "category":"Experiencia Laboral", 
                 "id_category":"experiencia_laboral",       
@@ -189,7 +189,7 @@ data = {
                 "value":""    
             },
             {   "field":"Programador_Aplicaciones_Web_2007_2009",        
-                "text_field":"Programador Aplicaciones web 2007-2009",        
+                "text_field":"Programador Aplicaciones web ",        
                 "info":"Aplicaciones web en java usando la tecnología java, jsp, javascript y html.",        
                 "category":"Experiencia Laboral", 
                 "id_category":"experiencia_laboral",       
@@ -199,7 +199,7 @@ data = {
                 "value":""    
             },
             {   "field":"Programador_JAVA_2006_2007",        
-                "text_field":"Programador JAVA 2006-2007",        
+                "text_field":"Programador JAVA ",        
                 "info":"Progamar en java una aplicación para analizar una estructura por el método de elementos de contorno en la Universidad de Granada, Facultad de caminos, departamento de mecánica de estructuras.",        
                 "category":"Experiencia Laboral", 
                 "id_category":"experiencia_laboral",       
@@ -209,7 +209,7 @@ data = {
                 "value":""    
             },
             {   "field":"Secretario_VDA_2012_2014",        
-                "text_field":"Secretario VDA 2012-2014",        
+                "text_field":"Secretario VDA ",        
                 "info":"Secretario y voluntario en una asociación cuyo objetivo es enseñar a personas  para introducirlos en las nuevas tecnologías y en el mundo de la ciencia. Enseñar desde como manejar un ordenador, hasta perfiles en redes sociales, correo electrónicos, móviles...",        
                 "category":"Experiencia", 
                 "id_category":"experiencia",       
@@ -229,7 +229,7 @@ data = {
                 "value":""    
             },
             {   "field":"Maquetador_EPUB_2012",        
-                "text_field":"Maquetador EPUB 2012",        
+                "text_field":"Maquetador EPUB ",        
                 "info":"Dar formato EPUB digital a el libro Spintronica con ISBN: 9781291125177 de Daniel Manzano Diosdado}",        
                 "category":"Experiencia", 
                 "id_category":"experiencia",       
@@ -239,7 +239,7 @@ data = {
                 "value":""    
             },
             {   "field":"Voluntario_Andalucía_Compromiso_Digital_2010_2012",        
-                "text_field":"Voluntario Andalucía Compromiso Digital 2010-2012",        
+                "text_field":"Voluntario Andalucía Compromiso Digital ",        
                 "info":"Enseñar a personas con riesgo de exclusión social para introducirlos en las nuevas tecnologías y en la sociedad de la información. Enseñar desde como manejar un ordenador, hasta perfiles en redes sociales, correo electrónicos, móviles.",        
                 "category":"Experiencia", 
                 "id_category":"experiencia",       
@@ -249,7 +249,7 @@ data = {
                 "value":""    
             },
             {   "field":"Desarrollador_Android_2011",        
-                "text_field":"Desarrollador Android 2011",        
+                "text_field":"Desarrollador Android ",        
                 "info":"Crear aplicaciones android <a href='https://play.google.com/store/apps/developer?id=Phoenix_alx'>Play Market</a>",        
                 "category":"Experiencia", 
                 "id_category":"experiencia",       
