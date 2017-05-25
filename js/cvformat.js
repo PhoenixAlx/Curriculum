@@ -35,7 +35,7 @@ class CV{
         }
         let m= new menu("menu_lang");
         m.imgMenu="img/lang.png";
-        m.top="80px";
+        m.top="10px";
         m.left="10px";
         m.putMenu();
         m.addOptions({"elements":langs});
@@ -48,7 +48,7 @@ class CV{
         let ol=options_lang[this.datas_cv.lang]
         let m_cat= new menu("menu_categories");
         m_cat.top="10px";
-        m_cat.left="10px";
+        m_cat.left="100px";
         m_cat.zIndex=11000;
         m_cat.imgMenu="img/category.png";
         m_cat.putMenu();
