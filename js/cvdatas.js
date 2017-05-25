@@ -35,6 +35,18 @@ class datasCV{
 
         return cate_list;
     }
+    fieldByCat(category){
+        let field_list=[];
+        for (let i=0;i< this.datas[this.lang].length;i++){
+            let cate=this.datas[this.lang][i].category;
+            if (cate == category){
+                let field=this.datas[this.lang][i].field;
+                field_list.push(field);
+            }
+        }
+
+        return field_list;
+    }
     value(field){
         let valor="";
         for (let i=0;i< this.datas[this.lang].length;i++){
