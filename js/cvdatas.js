@@ -22,6 +22,19 @@ class datasCV{
 
         return cate_list;
     }
+    get categories(){
+        let cate_list={};
+        for (let i=0;i< this.datas[this.lang].length;i++){
+            let cate=this.datas[this.lang][i].category;
+            let id_cate=this.datas[this.lang][i].id_category;
+            let cate_keys=Object.keys(cate_list);
+            if ((cate_keys.indexOf(id_cate)<0) ){
+                cate_list[id_cate]=cate;
+            }
+        }
+
+        return cate_list;
+    }
     value(field){
         let valor="";
         for (let i=0;i< this.datas[this.lang].length;i++){
