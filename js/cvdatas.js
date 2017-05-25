@@ -35,7 +35,7 @@ class datasCV{
 
         return cate_list;
     }
-    fieldByCat(category){
+    fieldsByCat(category){
         let field_list=[];
         for (let i=0;i< this.datas[this.lang].length;i++){
             let cate=this.datas[this.lang][i].category;
