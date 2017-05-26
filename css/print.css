@@ -1,12 +1,25 @@
+@page { margin: 0cm; } 
+
 body {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 12px;
+    margin-left: 0.6cm;
+    margin-right: 0.6cm;
+    
 }
-
+#header{
+    position:fixed ;
+    top:0;
+    display:none;
+}
 header {
 	overflow: hidden;
+    margin-bottom: 10px;
+    
 }
-
+header nav, footer {
+    display: none;
+}
 header hgroup {
 	width: 80%;
 	float: left;
@@ -16,6 +29,7 @@ header hgroup {
 header figure {
 	width: 20%;
 	float: right;
+    display:none;
 }
 
 .contactform {
@@ -30,6 +44,8 @@ header figure {
 
 .grid_16 {
 	clear: both;
+    margin-top: 0.6cm;
+    page-break-after: always;
 }
 
 h3 {
@@ -57,4 +73,7 @@ h3 {
 p {
   orphans: 3; /* pas de ligne seule en bas */
   widows: 3; /* pas de ligne seule en haut */
+}
+#menu{
+    display:none;
 }

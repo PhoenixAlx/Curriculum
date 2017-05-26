@@ -48,7 +48,12 @@ class menu{
         button_menu.style.height=height;
     }
     addSummaryCSS(){
-         this.addCSSRule(document.styleSheets[0], 'summary::-webkit-details-marker', "display: none",1);
+        try{
+            this.addCSSRule(document.styleSheets[0], 'summary::-webkit-details-marker', "display: none",1);
+        }catch(err){
+            this.addCSSRule(document.styleSheets[0], 'details > summary:first-of-type', "list-style-type: none",1);
+        }
+         
     }
     addMenuCSS(){
         let menu=document.getElementById(this.name_container);
@@ -163,7 +168,7 @@ class menu{
     
     addCSSRule(sheet, selector, rules, index) {
         if("insertRule" in sheet) {
-            sheet.insertRule(selector + "{" + rules + "}", index);
+            sheet.insertRule(selector + "{" + rules + "}", index);  
         }
         else if("addRule" in sheet) {
             sheet.addRule(selector, rules, index);

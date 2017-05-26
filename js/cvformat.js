@@ -91,7 +91,6 @@ class CV{
                 let ol_cat_elem=document.getElementById(m_cat.element[a]);
                 ol_cat_elem.innerHTML=ol_cat_elem.innerHTML+'<label class="switch"><input type="checkbox" id="check_'+m_cat.element[a]+'" checked><div class="slider round"></div></label>';
                 let show=document.getElementById("check_"+m_cat.element[a]);
-                console.log(m_cat.element[a],cat_elem_field,a)
                 let key_field="";
                 for (let cef in cat_elem_field){
                     if (cat_elem_field[cef]==a){
@@ -117,6 +116,42 @@ class CV{
              
         }
         
+        
+    }
+    loadMenuExport(){
+        let options_export={"es":["exportar a PDF"],"en":["export to PDF"]}
+        let exportar=options_export[this.datas_cv.lang]
+        let m= new menu("menu_export");
+        m.imgMenu="img/export.png";
+        m.top="10px";
+        m.left="190px";
+        m.putMenu();
+        m.addOptions({"elements":exportar});
+        
+        let elem_exp=document.getElementById(m.element[exportar[0]]);
+        elem_exp.addEventListener("click", ()=>{
+            /*let pdf = new jsPDF('p', 'pt', 'a4')
+            let menu=document.getElementById('menu');
+            let header=document.getElementById('div_header');
+            let state_menu=menu.style.display;
+            let state_header=header.style.display;
+            menu.style.display="none";
+            header.style.display="none";
+            let options = {
+                format:PNG,
+                h:100,
+                w:100,
+                pagesplit: true,
+            }
+            pdf.addHTML(document.body,options,function() { let string = pdf.save('curriculumFMA');});*/
+            //doc.fromHTML($('#container').html(), 10, 10);
+            //doc.save('curriculum.pdf');
+            //$( "#container" ).print();
+            window.print();
+            /*menu.style.display=state_menu;
+            header.style.display=state_header;*/
+
+        });
         
     }
     loadInformation(){
@@ -157,6 +192,7 @@ class CV{
     loadCVFull(lang){
         this.setLang(lang);
         this.loadMenuCategories();
+        this.loadMenuExport();
         this.loadHeader();
         this.loadInformation();
     } 
