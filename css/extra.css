@@ -37,5 +37,28 @@
 body{
 font-size: 24px;
 }
+#menu_button{
+    position:fixed;
+    z-index:100;
+}
+#menu_button img{
+    width:50px;
+    height:50px;
+}
+#principal{
+    
+}
 
+#principal_1{
+    display: none ;
+    position:fixed;
+    background-color:#ffc107;
+    height:100%;
+    z-index:90;
+ .
+}
+#principal_2{
 
+    transition: margin-left .5s;
+ 
+}
