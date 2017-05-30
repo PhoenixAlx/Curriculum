@@ -8,6 +8,7 @@ class CV{
         this.loadCVFull(this.datas_cv.lang);
         this.loadMenuLang();
         this.addEventLang();
+        this.addEventMenuButton();
         
     }
     setLang(lang){
@@ -27,7 +28,26 @@ class CV{
         }
         
     }
+    addEventMenuButton(){
 
+        let img=document.getElementById("menu_button_img");
+        img.addEventListener("click", ()=>{
+            let menu=document.getElementById("principal_1");
+            if (menu.style.display=="none" || menu.style.display==""){
+                menu.style.transition="1s";
+                menu.style.display="block";
+                menu.style.width="5%";
+                document.getElementById("principal_2").style.marginLeft = "5%";
+            }else{
+                menu.style.display="none";
+                 menu.style.width="0";
+                document.getElementById("principal_2").style.marginLeft = "0";
+            }
+            
+        });
+
+        
+    }
     loadMenuLang(){
         let langs=[];
         for (let i in this.datas_cv.all_langs){
@@ -35,8 +55,9 @@ class CV{
         }
         let m= new menu("menu_lang");
         m.imgMenu="img/lang.png";
-        m.top="10px";
+        m.top="70px";
         m.left="10px";
+        m.zIndex=12000;
         m.putMenu();
         m.addOptions({"elements":langs});
         this.menus["lang"]=m;
@@ -47,8 +68,8 @@ class CV{
         let options_lang={"es":["ver","detalles"],"en":["show","details"]}
         let ol=options_lang[this.datas_cv.lang]
         let m_cat= new menu("menu_categories");
-        m_cat.top="10px";
-        m_cat.left="100px";
+        m_cat.top="170px";
+        m_cat.left="10px";
         m_cat.zIndex=11000;
         m_cat.imgMenu="img/category.png";
         m_cat.putMenu();
@@ -123,8 +144,9 @@ class CV{
         let exportar=options_export[this.datas_cv.lang]
         let m= new menu("menu_export");
         m.imgMenu="img/export.png";
-        m.top="10px";
-        m.left="190px";
+        m.top="260px";
+        m.left="10px";
+        m.zIndex=10000;
         m.putMenu();
         m.addOptions({"elements":exportar});
         
