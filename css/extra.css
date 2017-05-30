@@ -62,3 +62,9 @@ font-size: 24px;
     transition: margin-left .5s;
  
 }
+@media only screen and (max-device-width: 480px){
+    #container{
+        padding-top:40%;
+    
+    }
+}
