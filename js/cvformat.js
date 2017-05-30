@@ -36,8 +36,8 @@ class CV{
             if (menu.style.display=="none" || menu.style.display==""){
                 menu.style.transition="1s";
                 menu.style.display="block";
-                menu.style.width="5%";
-                document.getElementById("principal_2").style.marginLeft = "5%";
+                menu.style.width="10%";
+                document.getElementById("principal_2").style.marginLeft = "10%";
             }else{
                 menu.style.display="none";
                  menu.style.width="0";
