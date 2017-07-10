@@ -1,7 +1,7 @@
 data = {
         'es':[
             {   "field":"motivacion",
-                "text_field":"Qué puedo aportar",
+                "text_field":"Qué puedo aportar:",
                 "info":"La constancia y las ganas de aprender forman parte de mi caracter. Me gusta trabajar tanto en grupo o equípo como de forma autónoma. Los retos hacen surgir mi creatividad en la busquedad de soluciones.",
                 "category":"Motivación",
                 "id_category":"motivacion", 
@@ -10,7 +10,7 @@ data = {
                 "image":"",        
                 "value":""    
             },{   "field":"name",
-                "text_field":"Nombre",
+                "text_field":"Nombre:",
                 "info":"Francisco Manuel Bueno Pérez",
                 "category":"informacion personal",
                 "id_category":"informacion_personal", 
@@ -19,7 +19,7 @@ data = {
                 "value":""
             },
             {   "field":"telefono",
-                "text_field":"Teléfono",
+                "text_field":"Teléfono:",
                 "info":"(+34) 661177048, +44 7546876441",
                 "category":"informacion personal",
                 "id_category":"informacion_personal", 
@@ -29,7 +29,7 @@ data = {
                 "value":""    
             },
             {   "field":"email",        
-                "text_field":"Correo electrónico",        
+                "text_field":"Correo electrónico:",        
                 "info":"francisco.manuel.alexander@gmail.com",        
                 "category":"informacion personal", 
                 "id_category":"informacion_personal",       
@@ -38,7 +38,7 @@ data = {
                 "value":""    
             },
             {   "field":"conducir",        
-                "text_field":"Permiso de Conducir",        
+                "text_field":"Permiso de Conducir:",        
                 "info":"B",        
                 "category":"informacion personal", 
                 "id_category":"informacion_personal",       
@@ -58,7 +58,7 @@ data = {
                 "value":""    
             },
             {   "field":"licenciatura",        
-                "text_field":"Licenciado en Física",        
+                "text_field":"Licenciado en Física.",        
                 "info":"Facultad de Ciencias. Universidad de Granada.",        
                 "category":"Educación", 
                 "id_category":"educacion",       
@@ -68,7 +68,7 @@ data = {
                 "value":"",
                 "units":""    
             },{   "field":"C_A_P",        
-                "text_field":"Curso de aptitud pedagógica (CAP)",        
+                "text_field":"Curso de aptitud pedagógica (CAP).",        
                 "info":"Universidad de Granada.",        
                 "category":"Educación", 
                 "id_category":"educacion",       
@@ -78,7 +78,7 @@ data = {
                 "value":"180",
                 "units":"h."   
             },{   "field":"Creacion_Gestion_Empresas",        
-                "text_field":"Curso de Creación y Gestión de Empresas",        
+                "text_field":"Curso de Creación y Gestión de Empresas.",        
                 "info":"Instituto de Formación y Estudios Sociales (IFES). Granada.",        
                 "category":"Educación", 
                 "id_category":"educacion",       
@@ -88,7 +88,7 @@ data = {
                 "value":"434",
                 "units":"h."    
             },{   "field":"Formador_Ocupacional",        
-                "text_field":"Curso Formador Ocupacional",        
+                "text_field":"Curso Formador Ocupacional.",        
                 "info":"Instituto Municipal de Formación y Empleo (IMFE). Granada.",        
                 "category":"Educación", 
                 "id_category":"educacion",       
@@ -98,7 +98,7 @@ data = {
                 "value":"380",
                 "units":"h."    
             },{   "field":"Java_Oracle",        
-                "text_field":"Curso de Java y Oracle",        
+                "text_field":"Curso de Java y Oracle.",        
                 "info":"Atos Origin. Madrid.",        
                 "category":"Educación", 
                 "id_category":"educacion",       
@@ -108,7 +108,7 @@ data = {
                 "value":"175",
                 "units":"h."    
             },{   "field":"Formador_Formadores_Nuevas_Tecnologías",        
-                "text_field":"Formador de Formadores en Nuevas Tecnologías",        
+                "text_field":"Formador de Formadores en Nuevas Tecnologías.",        
                 "info":"Consorcio Centro de Formación en Comunicaciones y Tecnología de la Información de Málaga (FORMAN). Andalucía Compromiso Digital.",        
                 "category":"Educación", 
                 "id_category":"educacion",       
@@ -118,7 +118,7 @@ data = {
                 "value":"150",
                 "units":"h."    
             },{   "field":"Programacion_java_WSAD",        
-                "text_field":"Curso Programación en JAVA+WSAD",        
+                "text_field":"Curso Programación en JAVA+WSAD.",        
                 "info":"Atos Origin. Madrid",        
                 "category":"Educación", 
                 "id_category":"educacion",       
@@ -129,7 +129,7 @@ data = {
                 "units":"h."    
             },
             {   "field":"Probabilistic_Graphical_Models",        
-                "text_field":"Probabilistic Graphical Models",        
+                "text_field":"Probabilistic Graphical Models.",        
                 "info":"Universidad de Stanford. Coursera.",        
                 "category":"Educación", 
                 "id_category":"educacion",       
@@ -140,7 +140,7 @@ data = {
                 "units":"sem."    
             },
             {   "field":"Introduccion_linux",        
-                "text_field":"Introducción a Linux",        
+                "text_field":"Introducción a Linux.",        
                 "info":"Departamento de Arquitectura y Tecnología de Computadores. Universidad de Granada.",        
                 "category":"Educación", 
                 "id_category":"educacion",       
@@ -151,7 +151,7 @@ data = {
                 "units":"h."    
             },
             {   "field":"Configuracion_administración_sistemas_personales_red",        
-                "text_field":"Configuración y Administración de Sistemas Personales y en Red",        
+                "text_field":"Configuración y Administración de Sistemas Personales y en Red.",        
                 "info":"Departamento de Arquitectura y Tecnología de Computadores. Universidad de Granada.",        
                 "category":"Educación", 
                 "id_category":"educacion",       
@@ -162,7 +162,7 @@ data = {
                 "units":"h."    
             },
             {   "field":"asistencia_seminarios_middlesex",        
-                "text_field":"Asistencia Seminarios del Departamento de Economía",        
+                "text_field":"Asistencia Seminarios del Departamento de Economía.",        
                 "info":"Universidad Middlesex Londres.",        
                 "category":"Educación", 
                 "id_category":"educacion",       
@@ -173,7 +173,7 @@ data = {
                 "units":""    
             },
             {   "field":"Lenguaje_Materno",        
-                "text_field":"Lenguaje materno",        
+                "text_field":"Lenguaje materno:",        
                 "info":"Español",        
                 "category":"Idiomas", 
                 "id_category":"idiomas",       
@@ -183,7 +183,7 @@ data = {
                 "value":""    
             },
             {   "field":"Lenguaje_Ingles",        
-                "text_field":"Inglés",        
+                "text_field":"Inglés:",        
                 "info":"En posesión título B1 (mejorándolo en la actualidad)",        
                 "category":"Idiomas", 
                 "id_category":"idiomas",       
@@ -192,7 +192,7 @@ data = {
                 "image":"",        
                 "value":""    
             },{   "field":"Lenguaje_catalan",        
-                "text_field":"Catalán",        
+                "text_field":"Catalán:",        
                 "info":"Nivel elemental. Estudiándolo en la actualidad",        
                 "category":"Idiomas", 
                 "id_category":"idiomas",       
@@ -202,7 +202,7 @@ data = {
                 "value":""    
             },
             {   "field":"habilidad_programacion",        
-                "text_field":"Lenguajes de Programación",        
+                "text_field":"Lenguajes de Programación:",        
                 "info":"Python, HTML, Javascript, R, PHP, NodeJs, Java, Fortran, C, Latex.",        
                 "category":"Habilidades", 
                 "id_category":"habilidades",       
@@ -212,7 +212,7 @@ data = {
                 "value":""    
             },
             {   "field":"habilidad_Herramientas",        
-                "text_field":"Herramientas de Programación",        
+                "text_field":"Herramientas de Programación:",        
                 "info":"Atom, Git.",        
                 "category":"Habilidades", 
                 "id_category":"habilidades",       
@@ -222,7 +222,7 @@ data = {
                 "value":""    
             },
             {   "field":"GAA_2014_2017",        
-                "text_field":"Universidad de Middlesex Londres (2014-actualidad)",        
+                "text_field":"Universidad de Middlesex Londres (2014-actualidad):",        
                 "info":"Asistente Académico. Trabajando en el Departamento de Economía, estudiando la Economía del Comportamiento. Realización de experimentos tanto en Qualtrics como en Python, análisis de resultados en Python y R. Creación de herramientas para el análisis de candidatos (utilando NodeJS, html y javascript) y profesores y clases (utilizando PHP, Python, R y Mysql). Implementación y mantenimiento de la web y del servidor (Apache) tanto del departamento como del grupo (Wordpress y Joomla). Gestión de las bases de datos (Mysql).",        
                 "category":"Experiencia", 
                 "id_category":"experiencia",       
@@ -232,7 +232,7 @@ data = {
                 "value":""    
             },
             {   "field":"Colaborador_APQUA",        
-                "text_field":"Universitat Rovira i Virgili, Tarragona (2013-2014)",        
+                "text_field":"Universitat Rovira i Virgili, Tarragona (2013-2014):",        
                 "info":"Colaborador del Proyecto APQUA, diseño e implementación de un plan de comunicación a través de las redes sociales y asesoramiento técnico de la web.",        
                 "category":"Experiencia", 
                 "id_category":"experiencia",       
@@ -242,7 +242,7 @@ data = {
                 "value":""    
             },
             {   "field":"Profesor_Apoyo",        
-                "text_field":"Academia Manuela Megia, Granada (2012)",        
+                "text_field":"Academia Manuela Megia, Granada (2012):",        
                 "info":"Profesor de apoyo a alumnos reforzando y mejorando los conocimientos de alumnos de secundaria, bachillerato y universidad en las asignaturas de física y matemáticas.",        
                 "category":"Experiencia", 
                 "id_category":"experiencia",       
@@ -252,7 +252,7 @@ data = {
                 "value":""    
             },
             {   "field":"Programador_Aplicaciones_Web_2007_2009",        
-                "text_field":"Atos Origin, Madrid (2007-2009) ",        
+                "text_field":"Atos Origin, Madrid (2007-2009):",        
                 "info":"Desarrollar aplicaciones webs basadas en Java, Javascript y HTML en diferentes proyectos.",        
                 "category":"Experiencia", 
                 "id_category":"experiencia",       
@@ -262,7 +262,7 @@ data = {
                 "value":""    
             },
             {   "field":"Programador_JAVA_2006_2007",        
-                "text_field":"Universidad de Granada, Granada (2006-2007) ",        
+                "text_field":"Universidad de Granada, Granada (2006-2007):",        
                 "info":"Progamador en el departamento de Mecánica de Estructuras de Facultad de Caminos desarrollando en Java una aplicación para analizar una estructura por el método de elementos de contorno.",        
                 "category":"Experiencia", 
                 "id_category":"experiencia",       
@@ -272,7 +272,7 @@ data = {
                 "value":""    
             },
             {   "field":"Diseño_Creación_Herramientas_Github",        
-                "text_field":"Diseño y Creación de Herramientas (2014-actualidad)",        
+                "text_field":"Diseño y Creación de Herramientas (2014-actualidad):",        
                 "info":" En la plataforma de <a href='https://github.com/PhoenixAlx'>GitHub</a> he alojado 35 repositorios, ideados y desarrollados en abierto y de licencias libres en diferentes lenguajes de programción", 
                 "category":"Experiencia", 
                 "id_category":"experiencia",       
@@ -282,7 +282,7 @@ data = {
                 "value":""    
             },
             {   "field":"Desarrollador_Web",        
-                "text_field":"Desarrollador web (2007-2016)",        
+                "text_field":"Desarrollador web (2007-2016):",        
                 "info":"Creación de herramientas en HTML5 y Javascript para uso en los artículos de divulgación creados para mi blog ", 
                 "category":"Experiencia", 
                 "id_category":"experiencia",       
@@ -292,7 +292,7 @@ data = {
                 "value":""    
             },
             {   "field":"Maquetador_EPUB_2012",        
-                "text_field":"Maquetador EPUB (2012)",        
+                "text_field":"Maquetador EPUB (2012):",        
                 "info":"Dar formato EPUB al libro Spintronica de Daniel Manzano Diosdado (ISBN: 9781291125177).",        
                 "category":"Experiencia", 
                 "id_category":"experiencia",       
@@ -302,7 +302,7 @@ data = {
                 "value":""    
             },
             {   "field":"Desarrollador_Android_2011",        
-                "text_field":"Desarrollador Android (2011)",        
+                "text_field":"Desarrollador Android (2011):",        
                 "info":"Creacion dse aplicaciones android disponibles en el Google Play",        
                 "category":"Experiencia", 
                 "id_category":"experiencia",       
@@ -312,7 +312,7 @@ data = {
                 "value":""    
             },
             {   "field":"Secretario_VDA_2012_2014",        
-                "text_field":"Voluntarios Digitales Andalucia (2012-2014) ",        
+                "text_field":"Voluntarios Digitales Andalucia (2012-2014):",        
                 "info":"Secretario y voluntario en la asociación. El objetivo de la cual es enseñar a personas para introducirlas en las nuevas tecnologías y en el mundo de la ciencia.",        
                 "category":"Voluntariado", 
                 "id_category":"voluntariado",       
@@ -322,7 +322,7 @@ data = {
                 "value":""    
             },
             {   "field":"Voluntario_Andalucía_Compromiso_Digital_2010_2012",        
-                "text_field":"Voluntario Andalucía Compromiso Digital (2010-2012) ",        
+                "text_field":"Voluntario Andalucía Compromiso Digital (2010-2012):",        
                 "info":"Voluntario en la asociación. El objetivo de la cual es enseñar a personas con riesgo de exclusión social para introducirlos en las nuevas tecnologías y en la sociedad de la información.",        
                 "category":"Voluntariado", 
                 "id_category":"voluntariado",       
@@ -332,7 +332,7 @@ data = {
                 "value":""    
             },
             {   "field":"Tecnicas_MonteCarlo_Enseñanza_Estadística",        
-                "text_field":"Técnicas Monte Carlo para la enseñanza de la estadística",        
+                "text_field":"Técnicas Monte Carlo para la enseñanza de la estadística:",        
                 "info":"Bueno Pérez, F.M. Alexander y Manzano Diosdado, Daniel. Probabilidad Condicionada Actas de las 1a Jornadas Virtuales en Didáctica de la Estadística, Probabilidad y Combinatoria Número I, Año I vol 2 Junio 2013 Actas de las 1a Jornadas Virtuales en Didáctica de la Estadística, Probabilidad y Combinatoria ISSN: 2255-5854 Depósito Legal: GR 446-2013",        
                 "category":"Publicaciones", 
                 "id_category":"publicaciones",       
