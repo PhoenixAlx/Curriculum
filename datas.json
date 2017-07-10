@@ -1,7 +1,7 @@
 data = {
         'es':[
             {   "field":"motivacion",
-                "text_field":"Motivación",
+                "text_field":"Qué puedo aportar",
                 "info":"La constancia y las ganas de aprender forman parte de mi caracter. Me gusta trabajar tanto en grupo o equípo como de forma autónoma. Los retos hacen surgir mi creatividad en la busquedad de soluciones.",
                 "category":"Motivación",
                 "id_category":"motivacion", 
@@ -162,15 +162,15 @@ data = {
                 "units":"h."    
             },
             {   "field":"asistencia_seminarios_middlesex",        
-                "text_field":"Asistencia Seminarios del Departamento de Economía.",        
+                "text_field":"Asistencia Seminarios del Departamento de Economía",        
                 "info":"Universidad Middlesex Londres.",        
                 "category":"Educación", 
                 "id_category":"educacion",       
                 "subcategory":"cursos",
                 "date":"2003",        
                 "image":"",        
-                "value":"20",
-                "units":"h."    
+                "value":"",
+                "units":""    
             },
             {   "field":"Lenguaje_Materno",        
                 "text_field":"Lenguaje materno",        
@@ -184,7 +184,7 @@ data = {
             },
             {   "field":"Lenguaje_Ingles",        
                 "text_field":"Inglés",        
-                "info":"En posesión título B1 (mejorandolo en la actualidad)",        
+                "info":"En posesión título B1 (mejorándolo en la actualidad)",        
                 "category":"Idiomas", 
                 "id_category":"idiomas",       
                 "subcategory":"idioma_oficial",
@@ -193,7 +193,7 @@ data = {
                 "value":""    
             },{   "field":"Lenguaje_catalan",        
                 "text_field":"Catalán",        
-                "info":"Nivel elemental. Estudiandolo en la actualidad",        
+                "info":"Nivel elemental. Estudiándolo en la actualidad",        
                 "category":"Idiomas", 
                 "id_category":"idiomas",       
                 "subcategory":"idioma_oficial",
@@ -203,7 +203,7 @@ data = {
             },
             {   "field":"habilidad_programacion",        
                 "text_field":"Lenguajes de Programación",        
-                "info":"Python,HTML,Javascript,R,PHP,NodeJs,Java,Fortran,C,Latex.",        
+                "info":"Python, HTML, Javascript, R, PHP, NodeJs, Java, Fortran, C, Latex.",        
                 "category":"Habilidades", 
                 "id_category":"habilidades",       
                 "subcategory":"programacion",
