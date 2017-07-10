@@ -187,8 +187,8 @@ class CV{
         m.putMenu();
         m.addOptions({"elements":options_menu});
         
-        let elem_exp=document.getElementById(m.element[options_menu[0]]);
-        elem_exp.addEventListener("click", ()=>{
+        let elem_supp=document.getElementById(m.element[options_menu[0]]);
+        elem_supp.addEventListener("click", ()=>{
            let url="https://github.com/PhoenixAlx/Curriculum/issues";
            window.open(url, '_blank');
 
@@ -235,7 +235,7 @@ class CV{
         this.setLang(lang);
         this.loadMenuCategories();
         this.loadMenuExport();
-        this. loadMenuSupport();
+        this.loadMenuSupport();
         this.loadHeader();
         this.loadInformation();
     } 

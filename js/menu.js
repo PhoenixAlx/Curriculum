@@ -1,5 +1,6 @@
 class menu{
     constructor(container){
+        console.log(container)
         this.name_container=container;
         this.active=false;
         this.element={};//Dict {'name':'id'}
