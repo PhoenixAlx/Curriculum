@@ -203,7 +203,7 @@ data = {
             },
             {   "field":"habilidad_programacion",        
                 "text_field":"Lenguajes de Programación:",        
-                "info":"Python, HTML, Javascript, R, PHP, NodeJs, Java, Fortran, C, Latex.",        
+                "info":"Python, Otree(Python), HTML, Javascript, R, PHP, NodeJs, Java, Fortran, C, Latex.",        
                 "category":"Habilidades", 
                 "id_category":"habilidades",       
                 "subcategory":"programacion",
