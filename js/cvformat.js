@@ -176,6 +176,26 @@ class CV{
         });
         
     }
+    loadMenuSupport(){
+        let options_support={"es":["Cuestiones"],"en":["issues"]}
+        let options_menu=options_support[this.datas_cv.lang]
+        let m= new menu("menu_support");
+        m.imgMenu="img/export.png";
+        m.top="350px";
+        m.left="10px";
+        m.zIndex=9000;
+        m.putMenu();
+        m.addOptions({"elements":options_menu});
+        
+        let elem_exp=document.getElementById(m.element[options_menu[0]]);
+        elem_exp.addEventListener("click", ()=>{
+           let url="https://github.com/PhoenixAlx/Curriculum/issues";
+           window.open(url, '_blank');
+
+
+        });
+        
+    }
     loadInformation(){
         //load sections
         let sections='<section role="main" class="container_16 " >';
@@ -215,6 +235,7 @@ class CV{
         this.setLang(lang);
         this.loadMenuCategories();
         this.loadMenuExport();
+        this. loadMenuSupport();
         this.loadHeader();
         this.loadInformation();
     } 
