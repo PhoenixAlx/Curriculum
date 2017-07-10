@@ -67,4 +67,8 @@ font-size: 24px;
         padding-top:40%;
     
     }
+    section[role=main] {
+        padding: 150px 0;
+        overflow: hidden;
+    }
 }
