@@ -154,7 +154,7 @@ class CV{
 
           var dataURL = canvas.toDataURL("image/png");
 
-          callback(dataURL.replace(/^data:image\/(png|jpg);base64,/, ""));
+          callback(dataURL);
       };
 
       img.src = url;
