@@ -159,7 +159,7 @@ class CV{
         image.src = url;
     }
     createPDF(dataUri){
-      let columns_header=[{ text: this.datas_cv.value("name"), alignment: 'center',style: 'header' }]
+      let columns_header=[]
       let footer_data=[{ text: "\n"+this.datas_cv.value("name")+"\n",alignment: 'center',style:'dataFooter'}];
 
       let sections=[{ text: this.datas_cv.value("name"), alignment: 'center',style: 'header' }];
@@ -200,6 +200,7 @@ class CV{
       let docDefinition = {
         pageSize: 'A4',
         pageMargins: [ 40, 60, 40, 60 ],
+        header:columns_header,
         footer: function(currentPage, pageCount,pageSize) {return [
                                                             { canvas: [{type: 'line',
                                                       					x1: 35, y1: 0,
@@ -252,9 +253,7 @@ class CV{
             if (hostname ==""){
               this.createPDF("");
             }else{
-              this.getDataUri(window.location.href+'img/perfil.jpg', function(dataUri) {
-                this.createPDF(dataUri);
-              });
+              this.createPDF("img/perfil.jpg");
             }
 
           });
