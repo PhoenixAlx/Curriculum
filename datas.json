@@ -2,7 +2,7 @@ data = {
         'es':[
             {   "field":"motivacion",
                 "text_field":"Qué puedo aportar:",
-                "info":"La constancia y las ganas de aprender forman parte de mi caracter. Me gusta trabajar tanto en grupo o equípo como de forma autónoma. Los retos hacen surgir mi creatividad en la busquedad de soluciones.",
+                "info":"La constancia y las ganas de aprender forman parte de mi carácter. Me gusta trabajar tanto en grupo o equipo como de forma autónoma. Los retos hacen surgir mi creatividad en la busqueda de soluciones.",
                 "category":"Motivación",
                 "id_category":"motivacion",
                 "subcategory":"motivacion",
@@ -12,7 +12,7 @@ data = {
             },{   "field":"name",
                 "text_field":"Nombre:",
                 "info":"Francisco Manuel Bueno Pérez",
-                "category":"informacion personal",
+                "category":"Información personal",
                 "id_category":"informacion_personal",
                 "subcategory":"informacion_personal_datos",
                 "date":"","image":"",
@@ -197,6 +197,7 @@ data = {
                 "category":"Idiomas",
                 "id_category":"idiomas",
                 "subcategory":"idioma_oficial",
+<<<<<<< HEAD
                 "date":"",
                 "image":"",
                 "value":""
@@ -206,6 +207,17 @@ data = {
                 "info":"Python, Otree(Python), HTML, Javascript, R, PHP, NodeJs, Java, Fortran, C, Latex.",
                 "category":"Habilidades",
                 "id_category":"habilidades",
+=======
+                "date":"",
+                "image":"",
+                "value":""
+            },
+            {   "field":"habilidad_programacion",
+                "text_field":"Lenguajes de Programación:",
+                "info":"Python, Otree(Python), HTML, Javascript, R, PHP, NodeJs, Java, Fortran, C, Latex.",
+                "category":"Habilidades",
+                "id_category":"habilidades",
+>>>>>>> f0ba8887e81de43cdb6507495aa25dacf81e0417
                 "subcategory":"programacion",
                 "date":"",
                 "image":"",
@@ -273,7 +285,7 @@ data = {
             },
             {   "field":"Diseño_Creación_Herramientas_Github",
                 "text_field":"Diseño y Creación de Herramientas (2014-actualidad):",
-                "info":" En la plataforma de <a href='https://github.com/PhoenixAlx'>GitHub</a> he alojado 35 repositorios, ideados y desarrollados en abierto y de licencias libres en diferentes lenguajes de programción",
+                "info":" En la plataforma de <a href='https://github.com/PhoenixAlx'>GitHub</a> he alojado 35 repositorios, ideados y desarrollados en abierto y de licencias libres en diferentes lenguajes de programación",
                 "category":"Experiencia",
                 "id_category":"experiencia",
                 "subcategory":"experiencia_otras_actividades",
@@ -303,7 +315,7 @@ data = {
             },
             {   "field":"Desarrollador_Android_2011",
                 "text_field":"Desarrollador Android (2011):",
-                "info":"Creacion dse aplicaciones android disponibles en el Google Play",
+                "info":"Creación de aplicaciones Android disponibles en el Google Play",
                 "category":"Experiencia",
                 "id_category":"experiencia",
                 "subcategory":"experiencia_otras_actividades",
@@ -312,7 +324,7 @@ data = {
                 "value":""
             },
             {   "field":"Secretario_VDA_2012_2014",
-                "text_field":"Voluntarios Digitales Andalucia (2012-2014):",
+                "text_field":"Voluntarios Digitales Andalucía (2012-2014):",
                 "info":"Secretario y voluntario en la asociación. El objetivo de la cual es enseñar a personas para introducirlas en las nuevas tecnologías y en el mundo de la ciencia.",
                 "category":"Voluntariado",
                 "id_category":"voluntariado",
