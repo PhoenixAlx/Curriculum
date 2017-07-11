@@ -252,7 +252,7 @@ class CV{
             if (hostname ==""){
               this.createPDF("");
             }else{
-              this.getDataUri('img/perfil.jpg', function(dataUri) {
+              this.getDataUri('/img/perfil.jpg', function(dataUri) {
                 this.createPDF(dataUri);
               });
             }
@@ -299,7 +299,7 @@ class CV{
                         if (this.datas_cv.data[i].units!=undefined && this.datas_cv.data[i].units!=""){
                             info_date=' ('+this.datas_cv.data[i].value+" "+this.datas_cv.data[i].units+')';
                         }
-                        section=section+'<p id="p_'+this.datas_cv.data[i].field+'"><b>'+this.datas_cv.data[i].text_field+''+info_date+':</b> <span class="cv_data_extra">'+this.datas_cv.data[i].info+'</span></p>';
+                        section=section+'<p id="p_'+this.datas_cv.data[i].field+'"><b>'+this.datas_cv.data[i].text_field+''+info_date+'</b> <span class="cv_data_extra">'+this.datas_cv.data[i].info+'</span></p>';
                     }
                 }
             }
