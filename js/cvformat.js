@@ -196,6 +196,7 @@ class CV{
 
 
       if (dataUri!=""){
+        console.log(dataUri)
         columns_header.push({ image: dataUri,height: 150, width: 150, alignment: 'right' })
       }
       let docDefinition = {
@@ -255,7 +256,6 @@ class CV{
               this.createPDF("");
             }else{
               this.getDataUri('img/perfil.jpg', (dataUri)=> {
-                console.log("data")
                 this.createPDF(dataUri);
               });
             }
