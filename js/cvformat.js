@@ -253,7 +253,7 @@ class CV{
             if (hostname ==""){
               this.createPDF("");
             }else{
-              this.createPDF("https://phoenixalx.github.io/Curriculum/img/perfil.jpg");
+              this.createPDF("perfil.jpg");
             }
 
           });
