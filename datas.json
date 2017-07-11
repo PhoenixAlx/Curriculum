@@ -197,7 +197,6 @@ data = {
                 "category":"Idiomas",
                 "id_category":"idiomas",
                 "subcategory":"idioma_oficial",
-<<<<<<< HEAD
                 "date":"",
                 "image":"",
                 "value":""
@@ -207,7 +206,6 @@ data = {
                 "info":"Python, Otree(Python), HTML, Javascript, R, PHP, NodeJs, Java, Fortran, C, Latex.",
                 "category":"Habilidades",
                 "id_category":"habilidades",
-=======
                 "date":"",
                 "image":"",
                 "value":""
@@ -217,7 +215,6 @@ data = {
                 "info":"Python, Otree(Python), HTML, Javascript, R, PHP, NodeJs, Java, Fortran, C, Latex.",
                 "category":"Habilidades",
                 "id_category":"habilidades",
->>>>>>> f0ba8887e81de43cdb6507495aa25dacf81e0417
                 "subcategory":"programacion",
                 "date":"",
                 "image":"",
