@@ -140,26 +140,27 @@ class CV{
 
     }
     getDataUri(url, callback) {
-        let image = new Image();
+      let img = new Image();
 
-        image.onload = function () {
-            var canvas = document.createElement('canvas');
-            canvas.width = this.naturalWidth; // or 'width' if you want a special/scaled size
-            canvas.height = this.naturalHeight; // or 'height' if you want a special/scaled size
+      img.setAttribute('crossOrigin', 'anonymous');
 
-            canvas.getContext('2d').drawImage(this, 0, 0);
+      img.onload = function () {
+          var canvas = document.createElement("canvas");
+          canvas.width =this.width;
+          canvas.height =this.height;
 
-            // Get raw image data
-            //callback(canvas.toDataURL('image/png').replace(/^data:image\/(png|jpg);base64,/, ''));
+          var ctx = canvas.getContext("2d");
+          ctx.drawImage(this, 0, 0);
 
-            // ... or get as Data URI
-            callback(canvas.toDataURL('image/png'));
-        };
-        console.log(url,image);
-        image.src = url;
+          var dataURL = canvas.toDataURL("image/png");
+
+          console.log(dataURL.replace(/^data:image\/(png|jpg);base64,/, ""));
+      };
+
+      img.src = url;
     }
     createPDF(dataUri){
-      let columns_header=[]
+      let columns_header=[{ text: this.datas_cv.value("name"), alignment: 'center',style: 'header' }]
       let footer_data=[{ text: "\n"+this.datas_cv.value("name")+"\n",alignment: 'center',style:'dataFooter'}];
 
       let sections=[{ text: this.datas_cv.value("name"), alignment: 'center',style: 'header' }];
@@ -200,7 +201,6 @@ class CV{
       let docDefinition = {
         pageSize: 'A4',
         pageMargins: [ 40, 60, 40, 60 ],
-        header:columns_header,
         footer: function(currentPage, pageCount,pageSize) {return [
                                                             { canvas: [{type: 'line',
                                                       					x1: 35, y1: 0,
@@ -253,7 +253,9 @@ class CV{
             if (hostname ==""){
               this.createPDF("");
             }else{
-              this.createPDF("perfil.jpg");
+              this.getDataUri('img/perfil.jpg', function(dataUri) {
+                this.createPDF(dataUri);
+              });
             }
 
           });
