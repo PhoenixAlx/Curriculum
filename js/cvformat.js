@@ -153,9 +153,9 @@ class CV{
             callback(canvas.toDataURL('image/png').replace(/^data:image\/(png|jpg);base64,/, ''));
 
             // ... or get as Data URI
-            callback(canvas.toDataURL('image/png'));
+            //callback(canvas.toDataURL('image/png'));
         };
-
+        console.log(url,image);
         image.src = url;
     }
     createPDF(dataUri){
