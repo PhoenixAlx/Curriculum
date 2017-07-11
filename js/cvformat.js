@@ -145,16 +145,16 @@ class CV{
       img.setAttribute('crossOrigin', 'anonymous');
 
       img.onload = function () {
-          var canvas = document.createElement("canvas");
+          let canvas = document.createElement("canvas");
           canvas.width =this.width;
           canvas.height =this.height;
 
-          var ctx = canvas.getContext("2d");
+          let ctx = canvas.getContext("2d");
           ctx.drawImage(this, 0, 0);
 
           var dataURL = canvas.toDataURL("image/png");
 
-          console.log(dataURL.replace(/^data:image\/(png|jpg);base64,/, ""));
+          callback(dataURL.replace(/^data:image\/(png|jpg);base64,/, ""));
       };
 
       img.src = url;
