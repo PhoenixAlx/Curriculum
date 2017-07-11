@@ -9,7 +9,7 @@ class CV{
         this.loadMenuLang();
         this.addEventLang();
         this.addEventMenuButton();
-        
+
     }
     setLang(lang){
        this.datas_cv.lang=lang;
@@ -26,7 +26,7 @@ class CV{
                 this.addEventLang();
             });
         }
-        
+
     }
     addEventMenuButton(){
 
@@ -43,10 +43,10 @@ class CV{
                  menu.style.width="0";
                 document.getElementById("principal_2").style.marginLeft = "0";
             }
-            
+
         });
 
-        
+
     }
     loadMenuLang(){
         let langs=[];
@@ -61,7 +61,7 @@ class CV{
         m.putMenu();
         m.addOptions({"elements":langs});
         this.menus["lang"]=m;
-        
+
     }
     loadMenuCategories(){
         let cate=this.datas_cv.all_values_uni("category");
@@ -77,7 +77,7 @@ class CV{
         for (let c in cate){
             let ol_new=ol.map((a)=>a+" "+cate[c])
             m_cat.addOptions({"elements":ol_new,parent:cate[c]});
-            
+
             let cat_elem=[];
             let cat_elem_field={};
             for (let i=0;i< this.datas_cv.data.length;i++){
@@ -104,10 +104,10 @@ class CV{
                         }
                     }
                 }
-    
+
             });
-            
-            
+
+
             cat_elem.map((a)=>{
                 let ol_cat_elem=document.getElementById(m_cat.element[a]);
                 ol_cat_elem.innerHTML=ol_cat_elem.innerHTML+'<label class="switch"><input type="checkbox" id="check_'+m_cat.element[a]+'" checked><div class="slider round"></div></label>';
@@ -119,7 +119,7 @@ class CV{
                     }
                 }
                 //this.datas_cv.data[i].field
-                
+
                 show.addEventListener("click", ()=>{
                     let div_show=document.getElementById("p_"+key_field);
                     if (show.checked){
@@ -127,17 +127,110 @@ class CV{
                      }else{
                            div_show.style.display="none";
                      }
-                     
-  
-        
+
+
+
                 });
-                
+
             });
-             
-             
+
+
         }
-        
-        
+
+
+    }
+    getDataUri(url, callback) {
+        let image = new Image();
+
+        image.onload = function () {
+            var canvas = document.createElement('canvas');
+            canvas.width = this.naturalWidth; // or 'width' if you want a special/scaled size
+            canvas.height = this.naturalHeight; // or 'height' if you want a special/scaled size
+
+            canvas.getContext('2d').drawImage(this, 0, 0);
+
+            // Get raw image data
+            callback(canvas.toDataURL('image/png').replace(/^data:image\/(png|jpg);base64,/, ''));
+
+            // ... or get as Data URI
+            callback(canvas.toDataURL('image/png'));
+        };
+
+        image.src = url;
+    }
+    createPDF(dataUri){
+      let columns_header=[{ text: this.datas_cv.value("name"), alignment: 'center',style: 'header' }]
+      let footer_data=[{ text: "\n"+this.datas_cv.value("name")+"\n",alignment: 'center',style:'dataFooter'}];
+
+      let sections=[{ text: this.datas_cv.value("name"), alignment: 'center',style: 'header' }];
+      let cate=this.datas_cv.all_values_uni("id_category");
+      let name_cate=this.datas_cv.all_values_uni("category");
+      for (let c=0;c< cate.length;c++){
+          let ca=cate[c];
+          let section={text: name_cate[c].toUpperCase(), style: 'section',decoration: 'underline',margin: [ 0,12,0,12]};
+          let list_section=[]
+          for (let i=0;i< this.datas_cv.data.length;i++){
+
+              if (ca==this.datas_cv.data[i].id_category){
+                  if (this.datas_cv.data[i].field=="email"){
+                      footer_data.push({ text: this.datas_cv.data[i].info,alignment: 'center',style:'dataFooter'})
+                  }
+                  if (this.datas_cv.data[i].field!="photoCV"){
+                      let info_date="";
+                      if (this.datas_cv.data[i].units!=undefined && this.datas_cv.data[i].units!=""){
+                          info_date='('+this.datas_cv.data[i].value+" "+this.datas_cv.data[i].units+')';
+                      }
+                      let name_point=this.datas_cv.data[i].text_field+' '+info_date;
+                      let text_point=' '+this.datas_cv.data[i].info;
+                      let row={text:[{text:name_point,bold: true},{text:text_point}],margin: [ 0,6,0,6]}
+                      list_section.push(row);
+
+                  }
+              }
+          }
+          let data_section={type:'none',ul:list_section};
+          sections.push(section);
+          sections.push(data_section);
+      }
+
+
+      if (dataUri!=""){
+        columns_header.push({ image: dataUri, width: 150, alignment: 'right' })
+      }
+      let docDefinition = {
+        pageSize: 'A4',
+        pageMargins: [ 40, 60, 40, 60 ],
+        footer: function(currentPage, pageCount,pageSize) {return [
+                                                            { canvas: [{type: 'line',
+                                                      					x1: 35, y1: 0,
+                                                      					x2: pageSize.width-35, y2: 0,
+                                                      					lineWidth: 1 }]
+                                                            },
+                                                            footer_data,
+                                                            { text:currentPage.toString() + '/' + pageCount,alignment: 'right',style:'dataFooter',margin: [ 0,0,6,0]}
+                                                          ] },
+        content: sections,
+        styles: {
+         header: {
+           fontSize: 22,
+           bold: true,
+           decoration: 'underline'
+         },
+         dataFooter:{
+           fontSize: 10,
+           italic: true,
+         },
+         section: {
+           italic: true,
+           fontSize: 18,
+           bold: true
+         }
+       }
+      };
+      pdfMake.createPdf(docDefinition).download('curriculumFMA.pdf');
+      //pdfMake.createPdf(docDefinition).open();
+
+
     }
     loadMenuExport(){
         let options_export={"es":["exportar a PDF"],"en":["export to PDF"]}
@@ -149,32 +242,24 @@ class CV{
         m.zIndex=10000;
         m.putMenu();
         m.addOptions({"elements":exportar});
-        
-        let elem_exp=document.getElementById(m.element[exportar[0]]);
-        elem_exp.addEventListener("click", ()=>{
-            /*let pdf = new jsPDF('p', 'pt', 'a4')
-            let menu=document.getElementById('menu');
-            let header=document.getElementById('div_header');
-            let state_menu=menu.style.display;
-            let state_header=header.style.display;
-            menu.style.display="none";
-            header.style.display="none";
-            let options = {
-                format:PNG,
-                h:100,
-                w:100,
-                pagesplit: true,
-            }
-            pdf.addHTML(document.body,options,function() { let string = pdf.save('curriculumFMA');});*/
-            //doc.fromHTML($('#container').html(), 10, 10);
-            //doc.save('curriculum.pdf');
-            //$( "#container" ).print();
-            window.print();
-            /*menu.style.display=state_menu;
-            header.style.display=state_header;*/
 
-        });
-        
+        let elem_exp=document.getElementById(m.element[exportar[0]]);
+
+
+
+        elem_exp.addEventListener("click", ()=>{
+            let hostname=window.location.host;
+            if (hostname ==""){
+              this.createPDF("");
+            }else{
+              this.getDataUri(window.location.host+'img/perfil.jpg', function(dataUri) {
+                this.createPDF(dataUri);
+              });
+            }
+
+          });
+
+
     }
     loadMenuSupport(){
         let options_support={"es":["Cuestiones"],"en":["issues"]}
@@ -186,7 +271,7 @@ class CV{
         m.zIndex=9000;
         m.putMenu();
         m.addOptions({"elements":options_menu});
-        
+
         let elem_supp=document.getElementById(m.element[options_menu[0]]);
         elem_supp.addEventListener("click", ()=>{
            let url="https://github.com/PhoenixAlx/Curriculum/issues";
@@ -194,7 +279,7 @@ class CV{
 
 
         });
-        
+
     }
     loadInformation(){
         //load sections
@@ -204,22 +289,22 @@ class CV{
         for (let c=0;c< cate.length;c++){
             let ca=cate[c];
             let section='<div class="grid_16"><div id="div_'+ca+'" class="grid_16  '+ca+'"><h3>'+name_cate[c]+'</h3>';
-            
+
             for (let i=0;i< this.datas_cv.data.length;i++){
-                
+
                 if (ca==this.datas_cv.data[i].id_category){
-                    
+
                     if (this.datas_cv.data[i].field!="photoCV"){
                         let info_date="";
                         if (this.datas_cv.data[i].units!=undefined && this.datas_cv.data[i].units!=""){
                             info_date=' ('+this.datas_cv.data[i].value+" "+this.datas_cv.data[i].units+')';
                         }
-                        section=section+'<p id="p_'+this.datas_cv.data[i].field+'"><b>'+this.datas_cv.data[i].text_field+''+info_date+'</b> <span class="cv_data_extra">'+this.datas_cv.data[i].info+'</span></p>';
+                        section=section+'<p id="p_'+this.datas_cv.data[i].field+'"><b>'+this.datas_cv.data[i].text_field+''+info_date+':</b> <span class="cv_data_extra">'+this.datas_cv.data[i].info+'</span></p>';
                     }
                 }
             }
             section=section+'</div></div>';
-            
+
             sections=sections+section;
         }
         sections=sections+'</section>';
@@ -238,5 +323,5 @@ class CV{
         this.loadMenuSupport();
         this.loadHeader();
         this.loadInformation();
-    } 
+    }
 }

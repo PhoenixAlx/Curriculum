@@ -1,3 +1,3 @@
 # Currículum
-jspdf from https://github.com/MrRio/jsPDF
+PDFmake from https://github.com/bpampuch/pdfmake
 jquery
