@@ -252,7 +252,7 @@ class CV{
             if (hostname ==""){
               this.createPDF("");
             }else{
-              this.getDataUri('/img/perfil.jpg', function(dataUri) {
+              this.getDataUri('Curriculum/img/perfil.jpg', function(dataUri) {
                 this.createPDF(dataUri);
               });
             }
