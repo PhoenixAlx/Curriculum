@@ -252,8 +252,7 @@ class CV{
             if (hostname ==""){
               this.createPDF("");
             }else{
-              console.log(window.location);
-              this.getDataUri('img/perfil.jpg', function(dataUri) {
+              this.getDataUri(window.location.href+'img/perfil.jpg', function(dataUri) {
                 this.createPDF(dataUri);
               });
             }
