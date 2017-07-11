@@ -254,6 +254,7 @@ class CV{
               this.createPDF("");
             }else{
               this.getDataUri('img/perfil.jpg', function(dataUri) {
+                console.log("data",dataUri)
                 this.createPDF(dataUri);
               });
             }
