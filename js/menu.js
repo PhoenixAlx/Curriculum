@@ -5,11 +5,12 @@ class menu{
         this.element={};//Dict {'name':'id'}
         this.element_position={};//Dict {position:integer}
         this.img="";
+        this.text_img=null;
         this.z_index=10000;
         this.background_color="#FFFFFF";
         this.left="0px";
         this.top="0px";
-        
+
     }
     putMenu(){
         this.addPrincipalHTML();
@@ -33,14 +34,20 @@ class menu{
     }
     addPrincipalHTML(){
         this.addMenuCSS();
-        let botton_menu='<img id="menu_img_'+this.name_container+'" src="'+this.img+'" ></img>';
+        let botton_menu='';
+        if (this.img!=""){
+          botton_menu='<img id="menu_img_'+this.name_container+'" src="'+this.img+'" ></img>';
+        }else{
+          botton_menu='<h1 id="menu_img_'+this.name_container+'" >'+"Test"+'</h1>';
+        }
+
         let navegation='<nav id="nav_menu_'+this.name_container+'" ></nav>';
         let div_container=document.getElementById(this.name_container);
         div_container.innerHTML=botton_menu+navegation;
         this.addButtonCSS("40px","60px")
         this.addNavCSS("2px","#000000");
         this.addSummaryCSS();
-        
+
     }
     addButtonCSS(width,height){
         let button_menu=document.getElementById('menu_img_'+this.name_container);
@@ -53,7 +60,7 @@ class menu{
         }catch(err){
             this.addCSSRule(document.styleSheets[0], 'details > summary:first-of-type', "list-style-type: none",1);
         }
-         
+
     }
     addMenuCSS(){
         let menu=document.getElementById(this.name_container);
@@ -72,7 +79,7 @@ class menu{
         nav_menu.style.borderRadius="5px";
         nav_menu.style.backgroundColor=this.background_color;
         nav_menu.style.overflow="auto";
- 
+
     }
     addUlCSS(ul_id,position){
         let ul_menu=document.getElementById(this.element[ul_id]);
@@ -82,8 +89,8 @@ class menu{
         ul_menu.style.margin="0";
         ul_menu.style.textAlign="center";
 
-        
-    }   
+
+    }
     addLiCSS(li_id,position){
         let li_menu=document.getElementById(li_id);
         li_menu.style.borderBottom="solid 1px #000000";
@@ -93,9 +100,9 @@ class menu{
             li_menu.style.borderBottom="solid 0px #000000";
             li_menu.style.fontSize="80%";
             li_menu.style.fontWeight="normal";
-            
+
         }else{
-            
+
             li_menu.style.fontSize="120%";
             li_menu.style.textTransform="uppercase";
             li_menu.style.fontWeight="bold";
@@ -113,7 +120,7 @@ class menu{
         let botton_menu=document.getElementById('menu_img_'+this.name_container);
         botton_menu.addEventListener("click", ()=>{this.activeMenu()});
     }
-    
+
     insertOptions(dict_options,parent){
         let position=this.getPosition(dict_options);
         let list_options=dict_options.elements;
@@ -124,14 +131,14 @@ class menu{
             ul_id=ul_id+"_"+position;
         }
         let total_options="<ul id='"+ul_id+"'>";
-        this.element["ul_"+parent]=ul_id; 
+        this.element["ul_"+parent]=ul_id;
         for (let i=0;i<list_options.length;i++){
             let id=parent+"_"+i;
             total_options=total_options+'<li id="'+id+'" ><p><span >'+list_options[i]+'</span></p></li>';
             this.element_position[list_options[i]]=position;
-            this.element[list_options[i]]=id; 
+            this.element[list_options[i]]=id;
         }
-        
+
         return total_options
     }
     addOptions(dict_options){
@@ -165,10 +172,10 @@ class menu{
         }
         this.active = !this.active;
     }
-    
+
     addCSSRule(sheet, selector, rules, index) {
         if("insertRule" in sheet) {
-            sheet.insertRule(selector + "{" + rules + "}", index);  
+            sheet.insertRule(selector + "{" + rules + "}", index);
         }
         else if("addRule" in sheet) {
             sheet.addRule(selector, rules, index);
