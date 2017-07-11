@@ -196,8 +196,8 @@ class CV{
 
 
       if (dataUri!=""){
-        console.log(dataUri)
-        columns_header.push({ image: dataUri,height: 150, width: 150, alignment: 'right' })
+
+        columns_header.push({ image: dataUri,height: 75, width: 75, alignment: 'right',margin: [ 0,0,40,0] })
       }
       let docDefinition = {
         pageSize: 'A4',
