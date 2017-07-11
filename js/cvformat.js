@@ -163,7 +163,7 @@ class CV{
       let columns_header=[]
       let footer_data=[{ text: "\n"+this.datas_cv.value("name")+"\n",alignment: 'center',style:'dataFooter'}];
 
-      let sections=[{text:[{ image: dataUri,height: 100, width: 100, alignment: 'right',margin: [ 0,0,10,0] },{ text: this.datas_cv.value("name"), alignment: 'center',style: 'header' }]}];
+      let sections=[{text:[{ text: this.datas_cv.value("name"), alignment: 'center',style: 'header' },{ image: dataUri,height: 100, width: 100, margin: [ 0,0,10,0] }]}];
       let cate=this.datas_cv.all_values_uni("id_category");
       let name_cate=this.datas_cv.all_values_uni("category");
       for (let c=0;c< cate.length;c++){
@@ -215,8 +215,7 @@ class CV{
         styles: {
          header: {
            fontSize: 22,
-           bold: true,
-           decoration: 'underline'
+           bold: true
          },
          dataFooter:{
            fontSize: 10,
