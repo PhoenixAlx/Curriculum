@@ -161,6 +161,17 @@ data = {
                 "value":"20",
                 "units":"h."
             },
+            {   "field":"asistencia_hackaton_ugr_osl_contaminacion",
+                "text_field":"Asistencia Open Data Day para análisis y publicación de datos de contaminación en Andalucía.",
+                "info":"Oficina de Software Libre Universidad de Granada.",
+                "category":"Educación",
+                "id_category":"educacion",
+                "subcategory":"cursos",
+                "date":"2017",
+                "image":"",
+                "value":"",
+                "units":""
+            },
             {   "field":"asistencia_seminarios_middlesex",
                 "text_field":"Asistencia Seminarios del Departamento de Economía.",
                 "info":"Universidad Middlesex Londres.",
