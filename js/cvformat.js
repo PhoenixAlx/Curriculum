@@ -40,7 +40,7 @@ class CV{
                 document.getElementById("principal_2").style.marginLeft = "100px";
             }else{
                 menu.style.display="none";
-                 menu.style.width="0";
+                menu.style.width="0";
                 document.getElementById("principal_2").style.marginLeft = "0";
             }
 
@@ -134,7 +134,6 @@ class CV{
 
             });
 
-
         }
 
 
@@ -162,36 +161,50 @@ class CV{
     createPDF(dataUri){
       let columns_header=[]
       let footer_data=[{ text: "\n"+this.datas_cv.value("name")+"\n",alignment: 'center',style:'dataFooter'}];
+      let sections=[{columns:[{ text: this.datas_cv.value("name"), alignment: 'center',style: 'header' }]}];
+      if (dataUri!=""){
+          let sections=[{columns:[{ text: this.datas_cv.value("name"), alignment: 'center',style: 'header' },{ image: dataUri,height: 100, width: 100, margin: [ 0,0,10,0] }]}];
+      }
 
-      let sections=[{columns:[{ text: this.datas_cv.value("name"), alignment: 'center',style: 'header' },{ image: dataUri,height: 100, width: 100, margin: [ 0,0,10,0] }]}];
       let cate=this.datas_cv.all_values_uni("id_category");
       let name_cate=this.datas_cv.all_values_uni("category");
       for (let c=0;c< cate.length;c++){
           let ca=cate[c];
-          let section={text: name_cate[c].toUpperCase(), style: 'section',decoration: 'underline',margin: [ 0,12,0,12]};
-          let list_section=[]
-          for (let i=0;i< this.datas_cv.data.length;i++){
+          let div_show_cat=document.getElementById("div_"+ca);
+          if (div_show_cat.style.display!=null && div_show_cat.style.display!="none"){
+            let section={text: name_cate[c].toUpperCase(), style: 'section',decoration: 'underline',margin: [ 0,12,0,12]};
+            let list_section=[]
+            for (let i=0;i< this.datas_cv.data.length;i++){
 
-              if (ca==this.datas_cv.data[i].id_category){
-                  if (this.datas_cv.data[i].field=="email"){
-                      footer_data.push({ text: this.datas_cv.data[i].info,alignment: 'center',style:'dataFooter'})
-                  }
-                  if (this.datas_cv.data[i].field!="photoCV"){
-                      let info_date="";
-                      if (this.datas_cv.data[i].units!=undefined && this.datas_cv.data[i].units!=""){
-                          info_date='('+this.datas_cv.data[i].value+" "+this.datas_cv.data[i].units+')';
-                      }
-                      let name_point=this.datas_cv.data[i].text_field+' '+info_date;
-                      let text_point=' '+this.datas_cv.data[i].info;
-                      let row={text:[{text:name_point,bold: true},{text:text_point}],margin: [ 0,6,0,6]}
-                      list_section.push(row);
 
+
+
+                if (ca==this.datas_cv.data[i].id_category){
+                  let div_show=document.getElementById("p_"+this.datas_cv.data[i].field);
+
+                  if ((div_show!=null) && (div_show.style.display!="none" ) ){
+                    if (this.datas_cv.data[i].field=="email"){
+                        footer_data.push({ text: this.datas_cv.data[i].info,alignment: 'center',style:'dataFooter'})
+                    }
+                    if (this.datas_cv.data[i].field!="photoCV"){
+                        let info_date="";
+                        if (this.datas_cv.data[i].units!=undefined && this.datas_cv.data[i].units!=""){
+                            info_date='('+this.datas_cv.data[i].value+" "+this.datas_cv.data[i].units+')';
+                        }
+                        let name_point=this.datas_cv.data[i].text_field+' '+info_date;
+                        let text_point=' '+this.datas_cv.data[i].info;
+                        let row={text:[{text:name_point,bold: true},{text:text_point}],margin: [ 0,6,0,6]}
+                        list_section.push(row);
+
+                    }
                   }
-              }
+                }
+
+            }
+            let data_section={type:'none',ul:list_section};
+            sections.push(section);
+            sections.push(data_section);
           }
-          let data_section={type:'none',ul:list_section};
-          sections.push(section);
-          sections.push(data_section);
       }
 
 
