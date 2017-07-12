@@ -270,6 +270,16 @@ data = {
                 "image":"",
                 "value":""
             },
+            {   "field":"habilidad_Herramientas_linux",
+                "text_field":"Distribuciones GNU/Linux:",
+                "info":"ArchLinux, Debian.",
+                "category":"Habilidades",
+                "id_category":"habilidades",
+                "subcategory":"programacion",
+                "date":"",
+                "image":"",
+                "value":""
+            },
             {   "field":"GAA_2014_2017",
                 "text_field":"Universidad de Middlesex Londres (2014-actualidad):",
                 "info":"Asistente Académico. Trabajando en el Departamento de Economía, estudiando la Economía del Comportamiento. Realización de experimentos tanto en Qualtrics como en Python(Otree, willow), análisis de resultados en Python y R. Creación de herramientas para el análisis de candidatos (utilando NodeJS, html y javascript) y profesores y clases (utilizando PHP, Python, R y Mysql). Implementación y mantenimiento de la web y del servidor (Apache) tanto del departamento como del grupo (Wordpress y Joomla). Gestión de las bases de datos (Mysql).",
