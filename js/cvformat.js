@@ -28,21 +28,30 @@ class CV{
         }
 
     }
+    moveScreen(){
+      let menu=document.getElementById("principal_1");
+      if (menu.style.display=="none" || menu.style.display==""){
+
+          $( "#principal_1" ).fadeIn( "slow", function() {
+            // Animation complete
+            menu.style.display="flex";
+          });
+
+      }else{
+        $( "#principal_1" ).fadeOut( "slow", function() {
+          // Animation complete
+          menu.style.display="none";
+        });
+
+          //menu.style.width="0";
+
+      }
+    }
     addEventMenuButton(){
 
         let img=document.getElementById("menu_button_img");
         img.addEventListener("click", ()=>{
-            let menu=document.getElementById("principal_1");
-            if (menu.style.display=="none" || menu.style.display==""){
-                menu.style.transition="1s";
-                menu.style.display="flex";
-                menu.style.marginTop="5%";
-                //document.getElementById("principal_2").style.marginLeft = "100px";
-            }else{
-                menu.style.display="none";
-                //menu.style.width="0";
-                document.getElementById("principal_2").style.marginLeft = "0";
-            }
+            this.moveScreen();
 
         });
 
@@ -58,7 +67,7 @@ class CV{
 
         m.imgMenu="img/lang.png";
         m.imgTextMenu=options_lang[this.datas_cv.lang];
-        m.top="0%";
+        m.top="10px";
         m.left="20px";
         m.zIndex=12000;
         m.putMenu();

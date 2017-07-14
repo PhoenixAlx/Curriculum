@@ -24,8 +24,8 @@
 
 }
 #menu img{
-    width:20px !important;
-    height:30px !important;
+    /*width:20px !important;
+    height:30px !important;*/
 }
 #container{
     padding-top:15%;
@@ -47,17 +47,17 @@ font-size: 24px;
     height:50px;
 }
 #principal{
-
+  display:flex;
 }
 
 #principal_1{
     display: none ;
-    position:fixed;
+    /*position:fixed;*/
     background-color:#FFFFFF;
 /*#419FD9*/;
     height:100%;
     z-index:90;
- .
+    padding-top: 10%;
 }
 #principal_2{
 
@@ -72,5 +72,8 @@ font-size: 24px;
     section[role=main] {
         padding: 150px 0;
         overflow: hidden;
+    }
+    #principal_1{
+        padding-top: 20%;
     }
 }

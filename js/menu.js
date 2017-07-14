@@ -6,7 +6,7 @@ class menu{
         this.element_position={};//Dict {position:integer}
         this.img={"url":"","text":""};
         this.text_img=null;
-        this.z_index=10000;
+        //this.z_index=10000;
         this.background_color="#FFFFFF";
         this.left="0px";
         this.top="0px";
@@ -168,8 +168,10 @@ class menu{
         let navegation=document.getElementById('nav_menu_'+this.name_container);
         if (this.active){
             navegation.style.display="none";
+
         }else{
             navegation.style.display="block";
+
         }
         this.active = !this.active;
     }
