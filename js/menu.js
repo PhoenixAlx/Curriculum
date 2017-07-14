@@ -4,7 +4,7 @@ class menu{
         this.active=false;
         this.element={};//Dict {'name':'id'}
         this.element_position={};//Dict {position:integer}
-        this.img="";
+        this.img={"url":"","text":""};
         this.text_img=null;
         this.z_index=10000;
         this.background_color="#FFFFFF";
@@ -18,7 +18,11 @@ class menu{
     }
     set imgMenu(src){
         //in example img/menu.png
-        this.img=src;
+        this.img['url']=src;
+    }
+    set imgTextMenu(text){
+        //in example img/menu.png
+        this.img['text']=text;
     }
     set zIndex(value){
         this.z_index=value;
@@ -35,11 +39,7 @@ class menu{
     addPrincipalHTML(){
         this.addMenuCSS();
         let botton_menu='';
-        if (this.img!=""){
-          botton_menu='<img id="menu_img_'+this.name_container+'" src="'+this.img+'" ></img>';
-        }else{
-          botton_menu='<h1 id="menu_img_'+this.name_container+'" >'+"Test"+'</h1>';
-        }
+        botton_menu='<img id="menu_img_'+this.name_container+'" src="'+this.img['url']+'" alt="'+this.img['text']+'" ></img>';
 
         let navegation='<nav id="nav_menu_'+this.name_container+'" ></nav>';
         let div_container=document.getElementById(this.name_container);
@@ -65,10 +65,11 @@ class menu{
     addMenuCSS(){
         let menu=document.getElementById(this.name_container);
         menu.style.display="block";
-        menu.style.zIndex=this.z_index;
-        menu.style.position="absolute";
-        menu.style.left=this.left;
-        menu.style.top=this.top;
+        //menu.style.zIndex=this.z_index;
+        menu.style.position="relative";
+        menu.style.marginLeft=this.left;
+        menu.style.marginRight=this.left;
+        menu.style.marginTop=this.top;
     }
     addNavCSS(border_size,color){
         let nav_menu=document.getElementById('nav_menu_'+this.name_container);

@@ -6,7 +6,7 @@ class CV{
         this.menus={};
         this.datas_cv= datas_cv;
         this.loadCVFull(this.datas_cv.lang);
-        this.loadMenuLang();
+        //this.loadMenuLang();
         this.addEventLang();
         this.addEventMenuButton();
 
@@ -22,7 +22,7 @@ class CV{
             elem.addEventListener("click", ()=>{
                 this.setLang(l);
                 this.loadCVFull(this.datas_cv.lang);
-                this.loadMenuLang();
+
                 this.addEventLang();
             });
         }
@@ -35,12 +35,12 @@ class CV{
             let menu=document.getElementById("principal_1");
             if (menu.style.display=="none" || menu.style.display==""){
                 menu.style.transition="1s";
-                menu.style.display="block";
-                menu.style.width="100px";
-                document.getElementById("principal_2").style.marginLeft = "100px";
+                menu.style.display="flex";
+                menu.style.marginTop="5%";
+                //document.getElementById("principal_2").style.marginLeft = "100px";
             }else{
                 menu.style.display="none";
-                menu.style.width="0";
+                //menu.style.width="0";
                 document.getElementById("principal_2").style.marginLeft = "0";
             }
 
@@ -53,10 +53,13 @@ class CV{
         for (let i in this.datas_cv.all_langs){
             langs.push(this.name_lang[this.datas_cv.lang][datas_cv.all_langs[i]])
         }
+        let options_lang={"es":"Idioma","en":"Language"}
         let m= new menu("menu_lang");
+
         m.imgMenu="img/lang.png";
-        m.top="70px";
-        m.left="10px";
+        m.imgTextMenu=options_lang[this.datas_cv.lang];
+        m.top="0%";
+        m.left="20px";
         m.zIndex=12000;
         m.putMenu();
         m.addOptions({"elements":langs});
@@ -68,10 +71,11 @@ class CV{
         let options_lang={"es":["ver","detalles"],"en":["show","details"]}
         let ol=options_lang[this.datas_cv.lang]
         let m_cat= new menu("menu_categories");
-        m_cat.top="170px";
-        m_cat.left="10px";
+        m_cat.top="20px";
+        m_cat.left="20px";
         m_cat.zIndex=11000;
         m_cat.imgMenu="img/category.png";
+        m_cat.imgTextMenu=options_lang[this.datas_cv.lang][0];
         m_cat.putMenu();
         m_cat.addOptions({"elements":cate});
         for (let c in cate){
@@ -247,8 +251,9 @@ class CV{
         let exportar=options_export[this.datas_cv.lang]
         let m= new menu("menu_export");
         m.imgMenu="img/export.png";
-        m.top="260px";
-        m.left="10px";
+        m.imgTextMenu=options_export[this.datas_cv.lang];
+        m.top="20px";
+        m.left="20px";
         m.zIndex=10000;
         m.putMenu();
         m.addOptions({"elements":exportar});
@@ -275,9 +280,10 @@ class CV{
         let options_support={"es":["Cuestiones"],"en":["issues"]}
         let options_menu=options_support[this.datas_cv.lang]
         let m= new menu("menu_support");
-        m.imgMenu="img/export.png";
-        m.top="350px";
-        m.left="10px";
+        m.imgMenu="img/issue.png";
+        m.imgTextMenu=options_support[this.datas_cv.lang];
+        m.top="20px";
+        m.left="20px";
         m.zIndex=9000;
         m.putMenu();
         m.addOptions({"elements":options_menu});
@@ -328,6 +334,7 @@ class CV{
     }
     loadCVFull(lang){
         this.setLang(lang);
+        this.loadMenuLang();
         this.loadMenuCategories();
         this.loadMenuExport();
         this.loadMenuSupport();
