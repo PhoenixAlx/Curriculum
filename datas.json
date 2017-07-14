@@ -233,7 +233,7 @@ data = {
             },
             {   "field":"habilidad_Herramientas_textos",
                 "text_field":"Herramientas de Edición de textos:",
-                "info":"Latex,markdown.",
+                "info":"Latex, Markdown.",
                 "category":"Habilidades",
                 "id_category":"habilidades",
                 "subcategory":"programacion",
