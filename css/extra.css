@@ -12,6 +12,15 @@
     top:0;
     position: fixed;
 }
+.class_menu_img{
+  /*white-space: nowrap !important;*/
+}
+.class_text_img_span{
+  margin-left: 2%;
+  font-size: 70%;
+
+}
+
 #header{
     position:fixed;
     width:100%;
@@ -21,6 +30,7 @@
     /*position:fixed;*/
     /*z-index:20;*/
     /*margin-top: 50%;*/
+    white-space:nowrap;
 
 }
 #menu img{
@@ -52,7 +62,7 @@ font-size: 24px;
 
 #principal_1{
     display: none ;
-    /*position:fixed;*/
+    position:fixed !important;
     background-color:#FFFFFF;
 /*#419FD9*/;
     height:100%;

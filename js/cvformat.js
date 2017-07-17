@@ -30,26 +30,43 @@ class CV{
     }
     moveScreen(){
       let menu=document.getElementById("principal_1");
+      let info=document.getElementById("principal_2");
       if (menu.style.display=="none" || menu.style.display==""){
 
           $( "#principal_1" ).fadeIn( "slow", function() {
             // Animation complete
             menu.style.display="flex";
+            console.log(  info.style.marginLeft)
+            info.style.marginLeft=menu.offsetWidth+"px";
+            console.log(  info.style.marginLeft)
           });
 
       }else{
         $( "#principal_1" ).fadeOut( "slow", function() {
           // Animation complete
           menu.style.display="none";
+          info.style.marginLeft=0;
         });
 
           //menu.style.width="0";
 
       }
     }
+    moveScreenOnlyResize(){
+      let menu=document.getElementById("principal_1");
+      let info=document.getElementById("principal_2");
+      $( "#principal_1" ).fadeIn( "slow", function() {
+        // Animation complete
+        menu.style.display="flex";
+        console.log(  info.style.marginLeft)
+        info.style.marginLeft=menu.offsetWidth+"px";
+        console.log(  info.style.marginLeft)
+      });
+    }
     addEventMenuButton(){
 
         let img=document.getElementById("menu_button_img");
+
         img.addEventListener("click", ()=>{
             this.moveScreen();
 
@@ -64,7 +81,7 @@ class CV{
         }
         let options_lang={"es":"Idioma","en":"Language"}
         let m= new menu("menu_lang");
-
+        m.extra_event=this.moveScreenOnlyResize;
         m.imgMenu="img/lang.png";
         m.imgTextMenu=options_lang[this.datas_cv.lang];
         m.top="10px";
@@ -78,13 +95,15 @@ class CV{
     loadMenuCategories(){
         let cate=this.datas_cv.all_values_uni("category");
         let options_lang={"es":["ver","detalles"],"en":["show","details"]}
+        let text_icon={"es":["Detalles"],"en":["Details"]}
         let ol=options_lang[this.datas_cv.lang]
         let m_cat= new menu("menu_categories");
+        m_cat.extra_event=this.moveScreenOnlyResize;
         m_cat.top="20px";
         m_cat.left="20px";
         m_cat.zIndex=11000;
         m_cat.imgMenu="img/category.png";
-        m_cat.imgTextMenu=options_lang[this.datas_cv.lang][0];
+        m_cat.imgTextMenu=text_icon[this.datas_cv.lang];
         m_cat.putMenu();
         m_cat.addOptions({"elements":cate});
         for (let c in cate){
@@ -257,10 +276,12 @@ class CV{
     }
     loadMenuExport(){
         let options_export={"es":["exportar a PDF"],"en":["export to PDF"]}
+        let text_icon={"es":["Exportar"],"en":["Export"]}
         let exportar=options_export[this.datas_cv.lang]
         let m= new menu("menu_export");
+        m.extra_event=this.moveScreenOnlyResize;
         m.imgMenu="img/export.png";
-        m.imgTextMenu=options_export[this.datas_cv.lang];
+        m.imgTextMenu=text_icon[this.datas_cv.lang];
         m.top="20px";
         m.left="20px";
         m.zIndex=10000;
@@ -287,10 +308,12 @@ class CV{
     }
     loadMenuSupport(){
         let options_support={"es":["Cuestiones"],"en":["issues"]}
+        let text_icon={"es":["Sugerencias"],"en":["Issues"]};
         let options_menu=options_support[this.datas_cv.lang]
         let m= new menu("menu_support");
+        m.extra_event=this.moveScreenOnlyResize;
         m.imgMenu="img/issue.png";
-        m.imgTextMenu=options_support[this.datas_cv.lang];
+        m.imgTextMenu=text_icon[this.datas_cv.lang];
         m.top="20px";
         m.left="20px";
         m.zIndex=9000;

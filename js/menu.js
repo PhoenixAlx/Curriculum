@@ -10,6 +10,7 @@ class menu{
         this.background_color="#FFFFFF";
         this.left="0px";
         this.top="0px";
+        this.extra_event=null;
 
     }
     putMenu(){
@@ -39,7 +40,7 @@ class menu{
     addPrincipalHTML(){
         this.addMenuCSS();
         let botton_menu='';
-        botton_menu='<img id="menu_img_'+this.name_container+'" src="'+this.img['url']+'" alt="'+this.img['text']+'" ></img>';
+        botton_menu='<img id="menu_img_'+this.name_container+'" src="'+this.img['url']+'" alt="'+this.img['text']+'"  class="class_menu_img"><span class="class_text_img_span">'+this.img['text']+'</span></img>';
 
         let navegation='<nav id="nav_menu_'+this.name_container+'" ></nav>';
         let div_container=document.getElementById(this.name_container);
@@ -53,6 +54,8 @@ class menu{
         let button_menu=document.getElementById('menu_img_'+this.name_container);
         button_menu.style.width=width;
         button_menu.style.height=height;
+        button_menu.style.verticalAlign="middle";
+
     }
     addSummaryCSS(){
         try{
@@ -74,12 +77,13 @@ class menu{
     addNavCSS(border_size,color){
         let nav_menu=document.getElementById('nav_menu_'+this.name_container);
         nav_menu.style.display="none";
-        nav_menu.style.width="100%";
+        nav_menu.style.width="90%";
         nav_menu.style.maxHeight="500px";
         nav_menu.style.border="solid "+border_size+" "+color;
         nav_menu.style.borderRadius="5px";
         nav_menu.style.backgroundColor=this.background_color;
-        nav_menu.style.overflow="auto";
+        nav_menu.style.overflowY="scroll";
+        nav_menu.style.margin="10px";
 
     }
     addUlCSS(ul_id,position){
@@ -89,6 +93,7 @@ class menu{
         ul_menu.style.padding="0";
         ul_menu.style.margin="0";
         ul_menu.style.textAlign="center";
+        ul_menu.style.whiteSpace="normal";
 
 
     }
@@ -104,7 +109,7 @@ class menu{
 
         }else{
 
-            li_menu.style.fontSize="120%";
+            li_menu.style.fontSize="100%";
             li_menu.style.textTransform="uppercase";
             li_menu.style.fontWeight="bold";
         }
@@ -119,7 +124,13 @@ class menu{
     }
     addPrincipalEvent(){
         let botton_menu=document.getElementById('menu_img_'+this.name_container);
-        botton_menu.addEventListener("click", ()=>{this.activeMenu()});
+        botton_menu.addEventListener("click", ()=>{
+          this.activeMenu();
+          if (this.extra_event!=null){
+            this.extra_event();
+
+          }
+        });
     }
 
     insertOptions(dict_options,parent){
