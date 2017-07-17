@@ -37,6 +37,7 @@
 #menu img{
     /*width:20px !important;
     height:30px !important;*/
+    cursor:pointer;
 }
 #container{
     padding-top:15%;
