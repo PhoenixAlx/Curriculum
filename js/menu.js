@@ -102,6 +102,7 @@ class menu{
         li_menu.style.borderBottom="solid 1px #000000";
         li_menu.style.padding="10px";
         li_menu.style.textTransform="uppercase";
+        
         if (position>0){
             li_menu.style.borderBottom="solid 0px #000000";
             li_menu.style.fontSize="80%";
