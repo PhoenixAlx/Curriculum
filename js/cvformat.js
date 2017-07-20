@@ -2,7 +2,7 @@
 
 class CV{
     constructor(datas_cv){
-        this.name_lang={'es':{'es':'español','en':'inglés'},'en':{'es':'spanish','en':'english'}};
+        this.name_lang={'es':{'es':'español','en':'inglés','cat':'catalán'},'en':{'es':'spanish','en':'english','cat':'catalan'},'cat':{'es': 'espanyol', 'en': 'anglès', 'cat': 'català'}};
         this.menus={};
         this.datas_cv= datas_cv;
         this.loadCVFull(this.datas_cv.lang);
@@ -79,7 +79,7 @@ class CV{
         for (let i in this.datas_cv.all_langs){
             langs.push(this.name_lang[this.datas_cv.lang][datas_cv.all_langs[i]])
         }
-        let options_lang={"es":"Idioma","en":"Language"}
+        let options_lang={"es":"Idioma","en":"Language",'cat':'Idioma'}
         let m= new menu("menu_lang");
         m.extra_event=this.moveScreenOnlyResize;
         m.imgMenu="img/lang.png";
@@ -94,8 +94,8 @@ class CV{
     }
     loadMenuCategories(){
         let cate=this.datas_cv.all_values_uni("category");
-        let options_lang={"es":["ver","detalles"],"en":["show","details"]}
-        let text_icon={"es":["Detalles"],"en":["Details"]}
+        let options_lang={"es":["ver","detalles"],"en":["show","details"],"cat":["veure", "detalls"]}
+        let text_icon={"es":["Detalles"],"en":["Details"],'cat':['Detalls']}
         let ol=options_lang[this.datas_cv.lang]
         let m_cat= new menu("menu_categories");
         m_cat.extra_event=this.moveScreenOnlyResize;
@@ -275,8 +275,8 @@ class CV{
 
     }
     loadMenuExport(){
-        let options_export={"es":["exportar a PDF"],"en":["export to PDF"]}
-        let text_icon={"es":["Exportar"],"en":["Export"]}
+        let options_export={"es":["exportar a PDF"],"en":["export to PDF"],"cat":["exportar a PDF"]}
+        let text_icon={"es":["Exportar"],"en":["Export"],'cat':['Exportar']}
         let exportar=options_export[this.datas_cv.lang]
         let m= new menu("menu_export");
         m.extra_event=this.moveScreenOnlyResize;
@@ -307,8 +307,8 @@ class CV{
 
     }
     loadMenuSupport(){
-        let options_support={"es":["Cuestiones"],"en":["issues"]}
-        let text_icon={"es":["Sugerencias"],"en":["Issues"]};
+        let options_support={"es":["Cuestiones"],"en":["issues"],"cat": ["Qüestions"]}
+        let text_icon={"es":["Sugerencias"],"en":["Issues"],"cat": ["Suggeriments"]};
         let options_menu=options_support[this.datas_cv.lang]
         let m= new menu("menu_support");
         m.extra_event=this.moveScreenOnlyResize;
