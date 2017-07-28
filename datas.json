@@ -988,7 +988,7 @@ data = {
                 "units":"h."
             },
             {   "field":"asistencia_hackaton_ugr_osl_contaminacion",
-                "text_field":"Assistència Open Data Day per a anàlisi i publicació de dades de contaminació a Andalusia.",
+                "text_field":"Assistència al Open Data Day per a l'anàlisi i publicació de dades sobre contaminació a Andalusia.",
                 "info":"Oficina de Software Libre Universidad de Granada.",
                 "category":"Educació",
                 "id_category":"educacion",
@@ -999,7 +999,7 @@ data = {
                 "units":""
             },
             {   "field":"asistencia_seminarios_middlesex",
-                "text_field":"Assistència Seminaris del Departament d'Economia.",
+                "text_field":"Assistència als Seminaris del Departament d'Economia.",
                 "info":"Universitat Middlesex Londres.",
                 "category":"Educació",
                 "id_category":"educacion",
