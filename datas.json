@@ -1000,7 +1000,7 @@ data = {
             },
             {   "field":"asistencia_seminarios_middlesex",
                 "text_field":"Assistència Seminaris del Departament d'Economia.",
-                "info":"Middlesex University Londres.",
+                "info":"Universitat Middlesex Londres.",
                 "category":"Educació",
                 "id_category":"educacion",
                 "subcategory":"cursos",
@@ -1068,7 +1068,7 @@ data = {
                 "value":""
             },
             {   "field":"habilidad_Herramientas_formularios",
-                "text_field":"Eines de Creació Formularis:",
+                "text_field":"Eines de Creació de Formularis:",
                 "info":"Qualtrics, Google Forms.",
                 "category":"Habilitats",
                 "id_category":"habilidades",
@@ -1118,7 +1118,7 @@ data = {
                 "value":""
             },
             {   "field":"GAA_2014_2017",
-                "text_field":"Middlesex University Londres (2014-actualitat):",
+                "text_field":"Universitat Middlesex  Londres (2014-actualitat):",
                 "info":"Assistent Acadèmic. Treballant en el Departament d'Economia, estudiant l'Economia del Comportament. Realització d'experiments tant en Qualtrics com en Python (Otree, willow), anàlisi de resultats en Python i R. Creació d'eines per a l'anàlisi de candidats (utilitzant NodeJS, html i javascript) i professors i classes (utilitzant PHP, Python, R i Mysql). Implementació i manteniment del web i del servidor (Apache) tant del departament com del grup (Wordpress i Joomla). Gestió de les bases de dades (Mysql).",
                 "category":"Experiència",
                 "id_category":"experiencia",
